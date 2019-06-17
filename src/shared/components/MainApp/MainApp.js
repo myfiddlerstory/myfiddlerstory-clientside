@@ -10,13 +10,15 @@ import AppContainer from '../AppContainer';
 import './MainApp.css'
 
 //import components..
-import Header from '../Header'
+import LandingPage from '../LandingPage'
 
 class MainApp extends PureComponent{
     render(){
         return (
             <div className="main-app-container">
-                <AppContainer isMenuVisible={true}/>
+                <AppContainer isMenuVisible={true}>
+                    <LandingPage/>
+                </AppContainer>
             </div>
         )
     }

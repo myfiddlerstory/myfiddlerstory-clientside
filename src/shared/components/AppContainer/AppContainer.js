@@ -17,7 +17,7 @@ class AppContainer extends PureComponent{
         return (
             <div className="app-container">
             <Header isMenuVisible={isMenuVisible}></Header>
-            
+            {this.props.children}
         </div>
         )
     }

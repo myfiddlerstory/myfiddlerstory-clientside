@@ -1,0 +1,16 @@
+.landing-page-container{
+    height: 520px;
+    margin-top: 70px;
+    padding-left: 250px;
+    padding-right: 250px;
+    font-size: 35px;
+    text-align: center
+}
+
+.landing-page-fade-in-container{
+    background: linear-gradient(to bottom, rgba(198,142,48, 0.7), rgba(198,142,48, 0.7));
+    height: 49px;
+    position: relative;
+    bottom: 52px;
+    width: 850px;
+}
