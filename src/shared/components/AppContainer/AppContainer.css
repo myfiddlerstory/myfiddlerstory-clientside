@@ -1,0 +1,8 @@
+.app-container{
+    background-image: url("../../icons/refugee_image.png");
+    height: inherit;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    padding-left: 40px;
+    padding-right: 40px;
+}

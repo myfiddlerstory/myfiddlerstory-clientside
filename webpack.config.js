@@ -29,30 +29,37 @@ module.exports = ({prod = false, sw = false, prefix = ''} = {}) => {
 
 	const webpackConfig = {
 		entry: {
-			main: ['./src/index.js'],
+			main: ['./src/client/index.js'],
 			vendor: ['react', 'react-dom']
 		},
 		output: {
 			path: path.resolve(__dirname, './build'),
 			pathinfo: true,
-			publicPath: ``,
+			publicPath: `/`,
 			filename: '[name].[hash:8].js'
 		},
 		module: {
 			loaders: [{
 				test: /\.(js|jsx)$/,
 				include: path.resolve(__dirname, './src'),
-				loaders: 'babel-loader'
+				loaders: 'babel-loader',
+				query: {
+                    presets: ["@babel/preset-env", "@babel/preset-react"]
+                }
 			}, {
 				test: /\.css$/,
 				loader: 'style-loader!css-loader'
-			}]
+			},
+			{
+				test: /\.(jpg|png|woff|woff2|eot|ttf|svg)$/, loader: 'file-loader'
+			}
+		]
 		},
 		plugins: [
 			new HtmlWebpackPlugin({
 				inject: true,
 				template: './public/index.html',
-				favicon: './public/favicon.ico',
+				favicon: './public/favicon.png',
 				minify: {
 					removeComments: true,
 					collapseWhitespace: true,
@@ -78,6 +85,7 @@ module.exports = ({prod = false, sw = false, prefix = ''} = {}) => {
 		devServer: {
 			contentBase: 'public',
 			inline: true,
+			historyApiFallback: true,
 			host: process.env.HOST || 'localhost',
 			port: Number.parseInt(process.env.PORT || 8080, 10)
 		}
@@ -91,14 +99,14 @@ module.exports = ({prod = false, sw = false, prefix = ''} = {}) => {
 		// Enable service worker while app running on dev server
 		if (sw) {
 			// Add service worker register script into html
-			webpackConfig.entry.sw = './src/sw-register.js';
+			webpackConfig.entry.sw = './src/server/sw-register.js';
 
 			// Add service worker precache generator
 			webpackConfig.plugins.push(new SWPrecacheWebpackDevPlugin(serviceWorkerConfig));
 		}
 	} else if (makemode === 'build') {
 		// Add service worker register script into html
-		webpackConfig.entry.sw = './src/sw-register.js';
+		webpackConfig.entry.sw = './src/server/sw-register.js';
 
 		// Add plugins for build
 		webpackConfig.plugins.push(new SWPrecacheWebpackPlugin(serviceWorkerConfig));
