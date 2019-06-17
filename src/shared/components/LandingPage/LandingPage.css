@@ -9,8 +9,34 @@
 
 .landing-page-fade-in-container{
     background: linear-gradient(to bottom, rgba(198,142,48, 0.7), rgba(198,142,48, 0.7));
-    height: 49px;
+    height: 52px;
     position: relative;
     bottom: 52px;
     width: 850px;
+}
+
+
+
+/************************************** Start Button ********************************/
+
+.start-button-container{
+    display: flex;
+    display: -webkit-flex;
+    padding-left: 190px;
+    padding-right: 190px;
+    margin-top: 10px;
+
+}
+
+.start-button{
+    width: 400px;
+    height: 65px;
+    background: #ffffff;
+    line-height: 65px;
+    color: #707070;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 18px;
+    font-size: 20px;
+    cursor: pointer;
 }

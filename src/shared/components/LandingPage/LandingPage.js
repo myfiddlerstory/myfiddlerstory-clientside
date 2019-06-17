@@ -10,11 +10,12 @@ import CustomScrollbar from '../CustomScrollbar'
 
 //import css
 import './LandingPage.css'
+import StartButton from './StartButton';
 class LandingPage extends PureComponent {
     render() {
         return (
-            <div className="landing-page-container">
-                <div style={{height: "inherit"}} >
+            <div >
+                <div className="landing-page-container">
                     <CustomScrollbar>
                         <p>
                             We are a nation of immigrants and refugees. Our
@@ -48,7 +49,9 @@ class LandingPage extends PureComponent {
                     </CustomScrollbar>
                     <div className="landing-page-fade-in-container"></div>
                 </div>
-                <div></div>
+                <div>
+                    <StartButton/>
+                </div>
             </div>
         )
     }
