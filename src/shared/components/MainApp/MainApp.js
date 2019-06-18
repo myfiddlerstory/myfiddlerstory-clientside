@@ -3,25 +3,40 @@
  * 16th June 2019
  */
 
-import React, {PureComponent} from 'react'
-import AppContainer from '../AppContainer';
+import React, { PureComponent } from 'react'
+
+import { Switch, Route } from 'react-router-dom'
+
 
 //import css
 import './MainApp.css'
 
 //import components..
 import LandingPage from '../LandingPage'
+import AppContainer from '../AppContainer';
+import Questions from '../Questions';
 
-class MainApp extends PureComponent{
-    render(){
+function MainApp(props){
+    // render() {
+        console.log("Router Changed")
         return (
             <div className="main-app-container">
-                <AppContainer isMenuVisible={true}>
-                    <LandingPage/>
-                </AppContainer>
+                <Switch>
+                    <Route exact path="/" render={routerProps => (
+                        <AppContainer isMenuVisible={true} {...routerProps}>
+                            <LandingPage {...routerProps}/>
+                        </AppContainer>
+                    )} />
+                    <Route path={"/questions"} render={routerProps => (
+                         <AppContainer isMenuVisible={false} {...routerProps}>
+                            <Questions {...routerProps}/>
+                        </AppContainer>
+                    )}/>
+                </Switch>
+
             </div>
         )
-    }
+    // }
 }
 
 

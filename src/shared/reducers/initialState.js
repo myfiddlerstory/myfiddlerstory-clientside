@@ -4,16 +4,9 @@
  */
 
 export default {
-    login:{
-        firstName: '',
-        lastName: '',
-        email: '',
-        profilePic: ''
-    },
-    questionData : [],
-    advertisingOptData: [],
-    isAccessTokenValid : null,
-    advertisingOpt:{
-        
+    question: {
+        byId: {
+        },
+        allIds:[]
     }
 }

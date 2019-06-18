@@ -4,8 +4,8 @@
  */
 
 import { reducer as formReducer } from 'redux-form';
-import GameReducer from './reducer'
+import FiddlerReducer from './reducer'
 export default {
-    GameReducer,
+    FiddlerReducer,
     form: formReducer
 }

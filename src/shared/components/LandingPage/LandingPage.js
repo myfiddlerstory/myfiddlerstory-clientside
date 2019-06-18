@@ -13,6 +13,7 @@ import './LandingPage.css'
 import StartButton from './StartButton';
 class LandingPage extends PureComponent {
     render() {
+        console.log("Landing Page getting called")
         return (
             <div >
                 <div className="landing-page-container">

@@ -39,14 +39,16 @@ module.exports = ({prod = false, sw = false, prefix = ''} = {}) => {
 			filename: '[name].[hash:8].js'
 		},
 		module: {
-			loaders: [{
+			loaders: [
+				{
 				test: /\.(js|jsx)$/,
 				include: path.resolve(__dirname, './src'),
 				loaders: 'babel-loader',
 				query: {
                     presets: ["@babel/preset-env", "@babel/preset-react"]
                 }
-			}, {
+			}, 
+			{
 				test: /\.css$/,
 				loader: 'style-loader!css-loader'
 			},

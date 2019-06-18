@@ -1,0 +1,51 @@
+.questions-container{
+    margin-top: 70px;
+    height: 520px;
+}
+
+.questions-all-data-container{
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.questions-data-container{
+    height: 450px;
+    font-size: 35px;
+}
+
+.questions-number-data {
+
+}
+
+.questions-data{
+    margin-left: 42px;
+}
+
+.questions-text-data{
+    line-height: 44px;
+    position: relative;
+    top: -13px;
+}
+
+.questions-description-data{
+    margin-top: 28px;
+}
+
+.questions-description-data textarea{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.questions-data .ui.input>input{
+    background: transparent;
+    border: none;
+    height: 35px;
+    line-height: 35px;
+    padding: 0px;
+}
+
+.input-container{
+    padding-left: 15px;
+}
+

@@ -5,20 +5,40 @@
 
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types';
+import {Link, withRouter} from 'react-router-dom'
 
 class StartButton extends PureComponent {
+
+    onOpenQuestions = () => {
+        const {history} = this.props
+        history.push("/questions")
+    }
     render() {
+        
         return (
             <div className="start-button-container">
-                <div style={{flex: "1 1 auto"}}>
-                    <div className="start-button">
-                        I Am A First Generation Refugee
-                </div>
+                <div style={{ flex: "1 1 auto" }}>
+                <Link to={{
+                            pathname: "/questions",
+                            type: "first",
+                        }}>
+                             <div className="start-button">
+                                I Am A First Generation Refugee
+                            </div>
+                        </Link>
+                       
                 </div>
                 <div>
-                    <div className="start-button">
-                        I Am A Second Generation Refugee
-                </div>
+                <Link to={{
+                            pathname: "/questions",
+                            type: "second",
+                        }}>
+                             <div className="start-button">
+                                I Am A Second Generation Refugee
+                            </div>
+                        </Link>
+                        
+
                 </div>
 
             </div>
@@ -26,4 +46,4 @@ class StartButton extends PureComponent {
     }
 }
 
-export default StartButton
+export default withRouter(StartButton)

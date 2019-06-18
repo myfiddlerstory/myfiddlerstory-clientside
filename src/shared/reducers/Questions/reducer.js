@@ -3,16 +3,24 @@
  * 3rd April 2019
  */
 
-import {STORE_QUESTIONS} from './action'
+import {INIT_QUESTIONS} from './action'
+
+import {initializeQuestions} from './helper'
 
 
 const QuestionReducer = (state, action) => {
     switch(action.type){
-        case STORE_QUESTIONS:{
-            const {questionData} = action.payload
+        case INIT_QUESTIONS:{
+            const {questions} = action.payload
+            const {questionIdList, questionById} = initializeQuestions(questions)
             state = {
                 ...state,
-                questionData:[...questionData]
+               question: {
+                   allIds: questionIdList,
+                   byId: {
+                       ...questionById
+                   }
+               }
             }
             break
         }

@@ -3,37 +3,34 @@
  * 3rd April 2019
  */
 
-export const STORE_QUESTIONS = "store_questions"
+export const INIT_QUESTIONS = "init_questions"
 import {QUESTION} from '../model'
 const model = QUESTION
 
 
-export const storeQuestionAction = (questionList) => {
+export const initQuestions = (questionList) => {
     return (dispatch, getState) => {
-        let questionData = []
-        if(questionList && questionList.length){
-            questionList.forEach((question, index) => {
-                if(question){
-                    questionData.push({
-                        id: index,
-                        question : question.description,
-                        option1: question.options.option1,
-                        option2: question.options.option2,
-                        option3: question.options.option3,
-                        option4: question.options.option4,
-                        correctAnswer: question.correctAnswer,
-                        explainationText: question.explanation
-                    })
-                }
-            })
-        }
-
         dispatch({
-            type: STORE_QUESTIONS,
+            type : INIT_QUESTIONS,
             model,
-            payload:{
-                questionData
+            payload: {
+                questions: questionList
             }
         })
     }
 }
+
+
+export const findQuestionById = (questionId) => {
+    return (dispatch, getState) => {
+        let state = getState()
+        let fiddlerData = state.FiddlerReducer
+        let question = fiddlerData.question
+        if(question && question.byId){
+            let questionData = question.byId[questionId]
+            return questionData
+        }
+    }
+}
+
+
