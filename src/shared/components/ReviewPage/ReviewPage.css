@@ -1,0 +1,43 @@
+.review-page-container{
+    margin-top: 70px;
+}
+
+.review-page-heading{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.review-page-text-1{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+.review-page-text-2{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.review-page-button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.review-page-button{
+   text-align: center;
+    margin-top: 70px;
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 18px;
+    border: solid 1px #707070;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #dfa02f;
+    cursor: pointer;
+}
