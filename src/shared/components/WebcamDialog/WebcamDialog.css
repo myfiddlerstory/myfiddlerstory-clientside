@@ -1,0 +1,33 @@
+.webcam-dialog-container{
+    width: 750px !important;
+    height: 550px;
+    padding: 20px;
+}
+
+.webcam-video-container{
+    margin-top: 30px
+}
+
+.webcam-dialog-close-container{
+    float: right;
+    cursor: pointer;
+}
+
+.webcam-dialog-button-container{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.webcam-dialog-start-stop-container{
+    width: 200px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    background: #dfa02f;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+

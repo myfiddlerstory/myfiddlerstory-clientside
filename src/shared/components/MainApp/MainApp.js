@@ -18,6 +18,7 @@ import Questions from '../Questions';
 import ReviewPage from '../ReviewPage'
 import CompletePage from '../CompletePage'
 import ReviewQuestions from '../ReviewQuestions'
+import Webcam from '../Webcam'
 
 function MainApp(props) {
     // render() {
@@ -26,6 +27,7 @@ function MainApp(props) {
         <div className="main-app-container">
             <Switch>
                 <Route exact path="/" render={routerProps => (
+                    // <Webcam/>
          
                         <LandingPage {...routerProps} />
 

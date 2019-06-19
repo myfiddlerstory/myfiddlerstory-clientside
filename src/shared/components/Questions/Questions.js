@@ -22,10 +22,34 @@ import VideoIcon from '../../icons/video_icon.png'
 import { firstGenerationQuestions, secondGenerationQuedstions } from '../dataHelper'
 //import actions
 import { initQuestions, findQuestionById } from '../../reducers/Questions/action'
+import WebcamDialog from '../WebcamDialog/WebcamDialog';
 
 class Questions extends PureComponent {
+
+    constructor(props){
+        super(props)
+        this.state = {
+            isDialogOpened : false
+        }
+    }
+
+    changeDialogState = (value) => {
+        this.setState({
+            isDialogOpened: value
+        })
+    }
+
+    onOpenDialog = () => {
+        this.changeDialogState(true)
+    }
+
+    onCloseDialog = () => {
+        this.changeDialogState(false)
+    }
     componentDidMount = () => {
         const { location, history, initQuestions } = this.props
+        const video = document.querySelector('video');
+        console.log("Video Instance", video)
         if (location) {
             if (location.type === "first") {
                 initQuestions(firstGenerationQuestions)
@@ -712,17 +736,17 @@ class Questions extends PureComponent {
                                 }
 
                                 <div >
-                                    <Link to={{
+                                    {/* <Link to={{
                                         pathname: "/review",
                                         type: location.type
-                                    }}>
-                                        <div className="record-video-container">
+                                    }}> */}
+                                        <div className="record-video-container" onClick={this.onOpenDialog}>
                                             <span className="record-video-icon">
                                                 <img src={VideoIcon} />
                                             </span>
                                             <span className="record-video-text"> Record your video</span>
                                         </div>
-                                    </Link>
+                                    {/* </Link> */}
 
                                 </div>
 
@@ -733,8 +757,10 @@ class Questions extends PureComponent {
 
 
                 </div>
+                {this.state.isDialogOpened && <WebcamDialog onCloseDialog={this.onCloseDialog} isDialogOpened={this.state.isDialogOpened}/>}
                 {location && location.type === "first" && <QuestionFooter totalQuestions={firstGenerationQuestions.length} />}
                 {location && location.type === "second" && <QuestionFooter totalQuestions={secondGenerationQuedstions.length} />}
+               
 
             </Fragment>
         )
