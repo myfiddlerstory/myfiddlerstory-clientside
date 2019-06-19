@@ -1,0 +1,46 @@
+.submit-dialog-modal{
+    height: 300px !important;
+    width: 500px !important;
+    border-radius: 40px !important;
+    padding: 40px !important;
+}
+
+.submit-dialog-modal-public {
+    height: 350px !important;
+    border-radius: 40px !important;
+    padding: 40px !important;
+    width: 500px !important;
+}
+
+.submit-dialog-container{
+    background: #ffffff;
+}
+
+.submit-dialog-heading-text{
+    font-size: 25px;
+}
+
+.submit-dialog-radio-button-container{
+    margin-top: 30px;
+}
+
+.submit-dialog-radio-button-container .ui.checkbox input.hidden+label{
+    font-size: 20px;
+}
+
+.submit-dialog-button-container{
+    float: right;
+    margin-top: 80px;
+}
+
+.submit-dialog-button{
+    width: 100px;
+    height: 42px;
+    text-align: center;
+    border-radius: 31px;
+    background-color: #dfa02f;
+    line-height: 42px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}

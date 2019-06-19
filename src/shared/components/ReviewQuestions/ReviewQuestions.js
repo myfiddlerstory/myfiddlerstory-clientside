@@ -12,8 +12,16 @@ import './ReviewQuestions.css'
 
 //import components
 import CustomScrollbar from '../CustomScrollbar'
+import SubmitDialog from '../SubmitDialog';
 
 class ReviewQuestions extends PureComponent {
+
+    constructor(props){
+        super(props)
+        this.state = {
+            isDialogOpened : false
+        }
+    }
 
     componentDidMount = () => {
         const { location, history } = this.props
@@ -22,9 +30,19 @@ class ReviewQuestions extends PureComponent {
         }
 
     }
+
+    onDialogStateChange = (value) => {
+        this.setState({
+            isDialogOpened : value
+        })
+    }
+
+    onOpenDialog = () => {
+        this.onDialogStateChange(true)
+    }
     render() {
         const { location } = this.props
-
+        const {isDialogOpened} = this.state
         return (
             <div className="review-questions-container">
                 {location && location.type &&
@@ -682,13 +700,14 @@ class ReviewQuestions extends PureComponent {
                             }
                             <div className="review-questions-button-container">
 
-                                <div className="review-questions-button">Submit</div>
+                                <div className="review-questions-button" onClick={this.onOpenDialog}>Submit</div>
 
 
                             </div>
                         </div>
                     </CustomScrollbar>
                 }
+                <SubmitDialog onDialogStateChange={this.onDialogStateChange} isDialogOpened={isDialogOpened}/>
 
             </div>
         )
