@@ -12,7 +12,8 @@ export const initializeQuestions = (questionList) => {
             questionIdList.push(index)
             questionById[index] =  {
                 id: index,
-                title : question
+                title : question,
+                answer: {value: ""}
             }
         });
     }

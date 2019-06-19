@@ -4,6 +4,8 @@
  */
 
 export const INIT_QUESTIONS = "init_questions"
+export const STORE_VIDEOS = "store_videos"
+export const STORE_ANSWER = "store_answer"
 import {QUESTION} from '../model'
 const model = QUESTION
 
@@ -32,5 +34,32 @@ export const findQuestionById = (questionId) => {
         }
     }
 }
+
+
+export const storeVideoAction = (videoSource) => {
+    console.log("Video Source", videoSource)
+    return (dispatch, getState) => {
+        dispatch({
+            type : STORE_VIDEOS,
+            model,
+            payload: videoSource
+        })
+    }
+}
+
+export const populateAnswer = (questionId, answer) => {
+
+    return (dispatch, getState) => {
+        dispatch({
+            type : STORE_ANSWER,
+            model,
+            payload:{
+                questionId : questionId,
+                answer : answer
+            }
+        })
+    }
+}
+
 
 

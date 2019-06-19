@@ -6,9 +6,13 @@
 import React, { PureComponent, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import {Modal} from 'semantic-ui-react'
+import {connect} from 'react-redux'
 
 //import css
 import './WebcamDialog.css'
+
+//import actions
+import {storeVideoAction} from '../../reducers/Questions/action'
 
 //import icons
 import CloseIcon from '../../icons/close_icon.svg'
@@ -28,6 +32,13 @@ class WebcamDialog extends PureComponent {
     }
 
     componentDidMount() {
+        const {video} = this.props
+        if(video){
+            this.setState({
+                isShowVideo: true,
+                videoSource: video
+            })
+        }
         const constraints = this.state.constraints;
         const getUserMedia = (params) => (
             new Promise((successCallback, errorCallback) => {
@@ -48,8 +59,6 @@ class WebcamDialog extends PureComponent {
             .catch((err) => {
                 console.log("Error", err);
             });
-
-        // this.clearPhoto();
     }
 
     startRecording = (event) => {
@@ -58,25 +67,72 @@ class WebcamDialog extends PureComponent {
             isRecordingStarted: true
         })
         this.recorder.startRecording();
-        // this.takePicture();
+       
     }
 
     stopRecording = () => {
+        const {storeVideoAction} = this.props
         this.recorder.getDataURL((data) => {
+            console.log("Data", data)
             this.setState({
                 videoSource: data,
                 isShowVideo: true,
                 isRecordingStarted: false
             })
+            storeVideoAction(data)
         })
+       
         this.recorder.stopRecording()
     }
+
+    onCancel = () => {
+        const {onCloseDialog, storeVideoAction, isReview} = this.props
+        if(!isReview){
+            storeVideoAction("")
+        }
+       
+        onCloseDialog()
+    }
+
+    onReploadUpload = () => {
+        const {onCloseDialog, storeVideoAction} = this.props
+        this.setVideo()
+        this.setState({
+            isRecordingStarted: false,
+            videoSource: "",
+            isShowVideo: false,
+        })
+        storeVideoAction("")
+    }
+
+    setVideo = () => {
+        let constraints = this.state.constraints
+        const getUserMedia = (params) => (
+            new Promise((successCallback, errorCallback) => {
+                navigator.webkitGetUserMedia.call(navigator, params, successCallback, errorCallback);
+            })
+        );
+
+        getUserMedia(constraints)
+            .then((stream) => {
+                const video = document.querySelector('video');
+                this.recorder = RecordRTC(stream, {
+                    type: "video"
+                })
+                video.srcObject = stream
+                this.recorder.stream = stream;
+                video.play();
+            })
+            .catch((err) => {
+                console.log("Error", err);
+            });
+    }
     render() {
-        const { isDialogOpened, onCloseDialog } = this.props
+        const { isDialogOpened, onCloseDialog, isReview } = this.props
         const { isShowVideo, isRecordingStarted, videoSource } = this.state
         return (
             <Modal open={isDialogOpened} className="webcam-dialog-container">
-                <div className="webcam-dialog-close-container" onClick={onCloseDialog}>
+                <div className="webcam-dialog-close-container" onClick={this.onCancel}>
                     <img src={CloseIcon} style={{width: "20px"}}/>
                 </div>
                 <div className="webcam-video-container">
@@ -88,10 +144,13 @@ class WebcamDialog extends PureComponent {
                         <div className="webcam-dialog-button-container">
                         {!isRecordingStarted && !isShowVideo && <div className="webcam-dialog-start-stop-container" onClick={this.startRecording}>Start Recording</div>}
                         {isRecordingStarted && <div className="webcam-dialog-start-stop-container" onClick={this.stopRecording}>Stop Recording</div>}
-                        {isShowVideo && <Fragment>
+                        {isShowVideo && !isReview && <Fragment>
                             <div className="webcam-dialog-start-stop-container" style={{marginRight:"10px"}} onClick={onCloseDialog}>Save</div>
-                            <div className="webcam-dialog-start-stop-container" style={{marginLeft:"10px"}} onClick={onCloseDialog}>Cancel</div>
+                            <div className="webcam-dialog-start-stop-container" style={{marginLeft:"10px"}} onClick={this.onCancel}>Cancel</div>
                         </Fragment>}
+                        {isShowVideo && isReview && 
+                        <div className="webcam-dialog-start-stop-container" onClick={this.onReploadUpload}>ReUpload</div>
+                        }
                         </div>
                        
                         
@@ -104,4 +163,14 @@ class WebcamDialog extends PureComponent {
     }
 }
 
-export default WebcamDialog
+const mapStateToProps = (state, ownProps) => {
+    return {
+        prop: state.prop
+    }
+}
+
+const mapActionsToProps = {
+    storeVideoAction
+}
+
+export default connect(null, mapActionsToProps)(WebcamDialog)

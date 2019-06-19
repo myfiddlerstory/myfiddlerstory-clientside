@@ -8,5 +8,6 @@ export default {
         byId: {
         },
         allIds:[]
-    }
+    },
+    video: ""
 }

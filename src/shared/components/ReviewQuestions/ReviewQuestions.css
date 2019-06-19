@@ -105,3 +105,17 @@
     color: #dfa02f;
     cursor: pointer;
 }
+
+.review-video-container{
+    margin-top: 20px;
+}
+
+.review-video{
+    height: 50px;
+    line-height: 50px;
+    width: 150px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
+}

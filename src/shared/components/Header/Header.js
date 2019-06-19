@@ -21,6 +21,8 @@ class Header extends PureComponent {
         const {history} = this.props
         // history.push("/")
     }
+
+    
     render() {
         const { isMenuVisible, onOpenSidebar } = this.props
         let menuClassName =  "header-menu"

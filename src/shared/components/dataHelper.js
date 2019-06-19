@@ -32,6 +32,7 @@ export const firstGenerationQuestions = [
 
 export const secondGenerationQuedstions = [
     "I live in",
+    "I am _ generation in this country",
     "I am _ (insert relative) _ migrated from _ to _ in",
     "Growing up, our family always felt a little different because",
     "My _ (insert relative) _ would often _ And it made me feel",
