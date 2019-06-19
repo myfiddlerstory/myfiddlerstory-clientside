@@ -6,7 +6,7 @@
 import React, { PureComponent, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import map from 'lodash/map'
 import { TextArea, Input, Form } from 'semantic-ui-react'
 
@@ -56,6 +56,7 @@ class Questions extends PureComponent {
         return (
             <Fragment>
                 <div className="questions-container">
+
                     {location && location.type &&
                         <CustomScrollbar>
                             <div className="questions-all-data-container">
@@ -404,14 +405,14 @@ class Questions extends PureComponent {
                                             </div>
                                         </div>
 
-                                        <div className="questions-data-container" style={{height: "350px"}}>
+                                        <div className="questions-data-container" style={{ height: "350px" }}>
                                             <div style={{ display: "flex" }}>
                                                 <div>Q23.</div>
                                                 <div className="questions-data">
                                                     <div className="questions-text-data">My prayer is…</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea fluid placeholder="Type words here.." />
+                                                            <TextArea placeholder="Type words here.." />
                                                         </Form>
 
                                                     </div>
@@ -431,7 +432,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">I live in</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea fluid placeholder="Enter City/Country" />
+                                                            <TextArea placeholder="Enter City/Country" />
                                                         </Form>
 
                                                     </div>
@@ -475,7 +476,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">Growing up, our family always felt a little different because</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea fluid placeholder="Type words here.." />
+                                                            <TextArea placeholder="Type words here.." />
                                                         </Form>
 
                                                     </div>
@@ -499,7 +500,7 @@ class Questions extends PureComponent {
                                                     <span style={{ lineHeight: "44px" }}> And it made me feel </span>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea fluid placeholder="Type words here.." />
+                                                            <TextArea placeholder="Type words here.." />
                                                         </Form>
 
                                                     </div>
@@ -519,7 +520,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">I have often wondered how they</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea fluid placeholder="Type words here.." />
+                                                            <TextArea placeholder="Type words here.." />
                                                         </Form>
 
                                                     </div>
@@ -535,7 +536,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">Now that I am older, I feel</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea fluid placeholder="Type words here.." />
+                                                            <TextArea placeholder="Type words here.." />
                                                         </Form>
 
                                                     </div>
@@ -551,7 +552,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">One tradition that they kept that I loved</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea fluid placeholder="Type words here.." />
+                                                            <TextArea placeholder="Type words here.." />
                                                         </Form>
 
                                                     </div>
@@ -567,7 +568,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">One traditions that they kept that I did not love</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea fluid placeholder="Type words here.." />
+                                                            <TextArea placeholder="Type words here.." />
                                                         </Form>
 
                                                     </div>
@@ -583,7 +584,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">I always wish I had asked</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea fluid placeholder="Type words here.." />
+                                                            <TextArea placeholder="Type words here.." />
                                                         </Form>
 
                                                     </div>
@@ -598,7 +599,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">I imagine they would say</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea fluid placeholder="Type words here.." />
+                                                            <TextArea placeholder="Type words here.." />
                                                         </Form>
 
                                                     </div>
@@ -614,7 +615,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">It is amazing to me that they</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea fluid placeholder="Type words here.." />
+                                                            <TextArea placeholder="Type words here.." />
                                                         </Form>
 
                                                     </div>
@@ -630,7 +631,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">It is amazing to me that they</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea fluid placeholder="Type words here.." />
+                                                            <TextArea placeholder="Type words here.." />
                                                         </Form>
 
                                                     </div>
@@ -646,7 +647,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">I wish I could tell them</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea fluid placeholder="Type words here.." />
+                                                            <TextArea placeholder="Type words here.." />
                                                         </Form>
 
                                                     </div>
@@ -662,7 +663,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">I am proud that</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea fluid placeholder="Type words here.." />
+                                                            <TextArea placeholder="Type words here.." />
                                                         </Form>
 
                                                     </div>
@@ -678,7 +679,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">And grateful for</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea fluid placeholder="Type words here.." />
+                                                            <TextArea placeholder="Type words here.." />
                                                         </Form>
 
                                                     </div>
@@ -686,14 +687,14 @@ class Questions extends PureComponent {
                                             </div>
                                         </div>
 
-                                        <div className="questions-data-container" style={{height: "350px"}}>
+                                        <div className="questions-data-container" style={{ height: "350px" }}>
                                             <div style={{ display: "flex" }}>
                                                 <div>Q15.</div>
                                                 <div className="questions-data">
                                                     <div className="questions-text-data">Here’s hoping that</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea fluid placeholder="Type words here.." />
+                                                            <TextArea placeholder="Type words here.." />
                                                         </Form>
 
                                                     </div>
@@ -711,13 +712,19 @@ class Questions extends PureComponent {
                                 }
 
                                 <div >
-                                            <div className="record-video-container">
-                                                <span className="record-video-icon">
-                                                    <img src={VideoIcon}/>
-                                                </span>
-                                                <span className="record-video-text"> Record your video</span>
-                                            </div>
+                                    <Link to={{
+                                        pathname: "/review",
+                                        type: location.type
+                                    }}>
+                                        <div className="record-video-container">
+                                            <span className="record-video-icon">
+                                                <img src={VideoIcon} />
+                                            </span>
+                                            <span className="record-video-text"> Record your video</span>
                                         </div>
+                                    </Link>
+
+                                </div>
 
                             </div>
                         </CustomScrollbar>
@@ -728,7 +735,7 @@ class Questions extends PureComponent {
                 </div>
                 {location && location.type === "first" && <QuestionFooter totalQuestions={firstGenerationQuestions.length} />}
                 {location && location.type === "second" && <QuestionFooter totalQuestions={secondGenerationQuedstions.length} />}
-                
+
             </Fragment>
         )
     }

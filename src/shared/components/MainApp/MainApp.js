@@ -17,6 +17,7 @@ import AppContainer from '../AppContainer';
 import Questions from '../Questions';
 import ReviewPage from '../ReviewPage'
 import CompletePage from '../CompletePage'
+import ReviewQuestions from '../ReviewQuestions'
 
 function MainApp(props) {
     // render() {
@@ -37,6 +38,11 @@ function MainApp(props) {
                 <Route path={"/review"} render={routerProps => (
                     <AppContainer isMenuVisible={false} {...routerProps}>
                         <ReviewPage {...routerProps} />
+                    </AppContainer>
+                )} />
+                <Route path={"/review-questions"} render={routerProps => (
+                    <AppContainer isMenuVisible={false} {...routerProps}>
+                        <ReviewQuestions {...routerProps} />
                     </AppContainer>
                 )} />
 
