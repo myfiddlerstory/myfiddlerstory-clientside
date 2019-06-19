@@ -5,7 +5,7 @@
 
 import React, { PureComponent, Fragment } from 'react'
 import { withRouter } from 'react-router-dom'
-import {Form, TextArea, Input} from 'semantic-ui-react'
+import { Form, TextArea, Input } from 'semantic-ui-react'
 
 //import css
 import './ReviewQuestions.css'
@@ -375,7 +375,7 @@ class ReviewQuestions extends PureComponent {
                                         </div>
                                     </div>
 
-                                    <div className="review-question-data-container" style={{ height: "350px" }}>
+                                    <div className="review-question-data-container">
                                         <div style={{ display: "flex" }}>
                                             <div>Q23.</div>
                                             <div className="review-question-data">
@@ -657,7 +657,7 @@ class ReviewQuestions extends PureComponent {
                                         </div>
                                     </div>
 
-                                    <div className="review-question-data-container" style={{ height: "350px" }}>
+                                    <div className="review-question-data-container">
                                         <div style={{ display: "flex" }}>
                                             <div>Q15.</div>
                                             <div className="review-question-data">
@@ -680,6 +680,12 @@ class ReviewQuestions extends PureComponent {
 
                                 </Fragment>
                             }
+                            <div className="review-questions-button-container">
+
+                                <div className="review-questions-button">Submit</div>
+
+
+                            </div>
                         </div>
                     </CustomScrollbar>
                 }
