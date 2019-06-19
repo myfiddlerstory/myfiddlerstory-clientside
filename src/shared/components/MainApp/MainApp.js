@@ -26,9 +26,9 @@ function MainApp(props) {
         <div className="main-app-container">
             <Switch>
                 <Route exact path="/" render={routerProps => (
-                    <AppContainer isMenuVisible={true} {...routerProps}>
+         
                         <LandingPage {...routerProps} />
-                    </AppContainer>
+
                 )} />
                 <Route path={"/questions"} render={routerProps => (
                     <AppContainer isMenuVisible={false} {...routerProps}>

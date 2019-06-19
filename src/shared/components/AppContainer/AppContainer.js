@@ -13,10 +13,10 @@ import Header from '../Header'
 
 class AppContainer extends PureComponent{
     render(){
-        const {isMenuVisible} = this.props
+        const {isMenuVisible, onOpenSidebar} = this.props
         return (
             <div className="app-container">
-            <Header isMenuVisible={isMenuVisible}></Header>
+            <Header isMenuVisible={isMenuVisible} onOpenSidebar={onOpenSidebar}></Header>
             {this.props.children}
         </div>
         )

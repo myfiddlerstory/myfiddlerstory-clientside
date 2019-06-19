@@ -22,7 +22,7 @@ class Header extends PureComponent {
         // history.push("/")
     }
     render() {
-        const { isMenuVisible } = this.props
+        const { isMenuVisible, onOpenSidebar } = this.props
         let menuClassName =  "header-menu"
         
         if (!isMenuVisible) {
@@ -32,7 +32,7 @@ class Header extends PureComponent {
             <div className="header-container">
                 <div className={menuClassName}>
                     <div style={{ fontWeight: "bold" }}>Menu</div>
-                    <img src={MenuLogo} style={{ width: "40px", cursor: "pointer" }} />
+                    <img src={MenuLogo} style={{ width: "40px", cursor: "pointer" }} onClick={onOpenSidebar}/>
                 </div>
 
                 <div className="header-logo-container">
