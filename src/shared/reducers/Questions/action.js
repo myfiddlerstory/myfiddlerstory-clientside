@@ -38,7 +38,6 @@ export const findQuestionById = (questionId) => {
 
 
 export const storeVideoAction = (videoSource) => {
-    console.log("Video Source", videoSource)
     return (dispatch, getState) => {
         dispatch({
             type : STORE_VIDEOS,

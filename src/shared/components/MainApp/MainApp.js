@@ -26,7 +26,6 @@ import News from '../News'
 
 function MainApp(props) {
     // render() {
-    console.log("Router Changed")
     return (
         <div className="main-app-container">
             <Switch>

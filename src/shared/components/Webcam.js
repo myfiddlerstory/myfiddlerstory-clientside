@@ -29,12 +29,10 @@ class WebcamCapture extends PureComponent {
         getUserMedia(constraints)
             .then((stream) => {
                 const video = document.querySelector('video');
-                console.log("Video Instance", video)
                  this.recorder = RecordRTC(stream, {
                      type: "video"
                  })
                 // const vendorURL = window.URL || window.webkitURL;
-                console.log("Video Stream", stream)
                 video.srcObject = stream
                 this.recorder.stream = stream;
                 video.play();

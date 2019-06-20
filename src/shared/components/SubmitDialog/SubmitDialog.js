@@ -77,7 +77,7 @@ class SubmitDialog extends PureComponent {
         const { email, fullName, value } = this.state
         let Anonymous = false
         if (email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
-            console.log("EMail")
+      
             return
         }
         if (value === "private" || (!email && !fullName)) {
@@ -127,7 +127,7 @@ class SubmitDialog extends PureComponent {
 
             }
         } else if (type === "second") {
-            console.log("Enter Second")
+    
             url = `${url}/add_second_generation_survey_information`
             questionObj = {
                 ...questionObj || "",
@@ -161,16 +161,12 @@ class SubmitDialog extends PureComponent {
             },
         }
         if (value) {
-            console.log("Api Calling")
             axios.post(url, questionObj, config)
                 .then((data) => {
                     console.log("Successfully Submiited", data)
                     //Usage example:
                     if(video){
                         fileDownload(video, 'MyFiddlerStory.webm')
-                        // fileDownload(video, 'MyFiddlerStory.mov')
-                        // let file = this.dataURLtoFile(video, 'video.mp4');
-                        // console.log(file);
                     }
                     setTimeout(() => {
                         onDialogStateChange(false)
@@ -180,6 +176,24 @@ class SubmitDialog extends PureComponent {
                 .catch(error => {
                     console.error("Error in submitting response", error)
                 })
+
+                if(email){
+                    let emailUrl = `${hostUrl}/sendEmail`
+                    let formData = {
+                        to: email
+                    }
+                    axios.post(emailUrl, formData, config)
+                    .then(data => {
+                        console.log("Email Send Successfully", data)
+                    })
+                    .catch(error => {
+                        console.log("Error in Sending mail", error)
+                    })
+
+                    
+                }
+
+
         }
 
     }

@@ -1226,7 +1226,6 @@ const mapStateToProps = (state, props) => {
             twentyThirdValue =  questionById["22"].answer.value
         }
         video = state.FiddlerReducer.video
-        console.log("First Value", firstValue)
     }
     
 

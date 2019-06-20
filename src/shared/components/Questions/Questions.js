@@ -395,7 +395,6 @@ class Questions extends PureComponent {
             var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
             // Partially visible elements return true:
             //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-            console.log("Is Scroll", isVisible)
             if(isVisible){
                 this.setState({
                     isFinishButtonVisible: true
