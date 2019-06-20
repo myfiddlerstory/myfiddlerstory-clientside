@@ -6,7 +6,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
 
 //import css
@@ -19,6 +19,9 @@ import QuestionsIcon from '../../icons/questions_icon.svg'
 import PublicAnswersIcon from '../../icons/public-answers_icon.svg'
 import NewsIcon from '../../icons/news_icon.svg'
 import partnerIcon from '../../icons/partner_icon.svg'
+
+
+
 
 class Navigation extends PureComponent {
     static propTypes = {
@@ -33,62 +36,64 @@ class Navigation extends PureComponent {
         super(props)
     }
 
- 
+
 
 
     render() {
-        const {onClose} = this.props
+        const { onClose } = this.props
         return (
-           <div className="navigation-container">
-            <div className="navigation-close-container" onClick={onClose}>
-                <img src={CloseIcon} style={{width: "25px"}}/>
+            <div className="navigation-container">
+                <div className="navigation-close-container" onClick={onClose}>
+                    <img src={CloseIcon} style={{ width: "25px" }} />
+                </div>
+                <div className="navigation-element-container">
+                    <div className="navigation-element">
+                        <span>
+                            <img src={AboutIcon} className="navigation-element-icon" />
+                        </span>
+                        <span className="navigation-element-text">
+                            About
+                    </span>
+                    </div>
+
+                    <div className="navigation-element">
+                        <span>
+                            <img src={QuestionsIcon} className="navigation-element-icon" />
+                        </span>
+                        <span className="navigation-element-text">
+                            The Questions
+                    </span>
+                    </div>
+                    <Link to={"/public-answers"}>
+                        <div className="navigation-element">
+                            <span>
+                                <img src={PublicAnswersIcon} className="navigation-element-icon" />
+                            </span>
+                            <span className="navigation-element-text">
+                                Public Answers
+                        </span>
+                        </div>
+                    </Link>
+
+
+                    <div className="navigation-element">
+                        <span>
+                            <img src={NewsIcon} className="navigation-element-icon" />
+                        </span>
+                        <span className="navigation-element-text">
+                            News
+                    </span>
+                    </div>
+                    <div className="navigation-element">
+                        <span>
+                            <img src={partnerIcon} className="navigation-element-icon" />
+                        </span>
+                        <span className="navigation-element-text">
+                            Partners
+                    </span>
+                    </div>
+                </div>
             </div>
-            <div className="navigation-element-container">
-                <div className="navigation-element">
-                    <span>
-                        <img src={AboutIcon} className="navigation-element-icon"/>
-                    </span>
-                    <span className="navigation-element-text">
-                        About
-                    </span>
-                </div>
-
-                <div className="navigation-element">
-                    <span>
-                        <img src={QuestionsIcon} className="navigation-element-icon"/>
-                    </span>
-                    <span className="navigation-element-text">
-                        The Questions
-                    </span>
-                </div>
-
-                 <div className="navigation-element">
-                    <span>
-                        <img src={PublicAnswersIcon} className="navigation-element-icon"/>
-                    </span>
-                    <span className="navigation-element-text">
-                        Public Answers
-                    </span>
-                </div>
-
-                <div className="navigation-element">
-                    <span>
-                        <img src={NewsIcon} className="navigation-element-icon"/>
-                    </span>
-                    <span className="navigation-element-text">
-                        News
-                    </span>
-                </div>
-                <div className="navigation-element">
-                    <span>
-                        <img src={partnerIcon} className="navigation-element-icon"/>
-                    </span>
-                    <span className="navigation-element-text">
-                        Partners
-                    </span>
-                </div>
-            </div>
-           </div>
         )
     }
 }

@@ -4,3 +4,4 @@
  */
 
  export const QUESTION             = "question"
+ export const USER                 = "user"

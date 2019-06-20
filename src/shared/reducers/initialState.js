@@ -9,5 +9,6 @@ export default {
         },
         allIds:[]
     },
-    video: ""
+    video: "",
+    userIds: []
 }

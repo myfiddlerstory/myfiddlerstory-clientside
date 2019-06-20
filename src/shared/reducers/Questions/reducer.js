@@ -3,7 +3,7 @@
  * 3rd April 2019
  */
 
-import {INIT_QUESTIONS, STORE_VIDEOS, STORE_ANSWER} from './action'
+import {INIT_QUESTIONS, STORE_VIDEOS, STORE_ANSWER, INIT_USER} from './action'
 
 import {initializeQuestions} from './helper'
 
@@ -50,6 +50,16 @@ const QuestionReducer = (state, action) => {
                     }
                 }
             }
+            break;
+        }
+
+        case INIT_USER:{
+            const {userIdList} = action.payload
+            state = {
+                ...state,
+                userIds : [...userIdList]
+            }
+            break
         }
     }
     return state

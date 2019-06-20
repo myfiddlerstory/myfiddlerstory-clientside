@@ -36,7 +36,7 @@
                          <Navigation onClose={onCloseSidebar}/>
                     </Sidebar>
 
-                    <Sidebar.Pusher dimmed={visible}>
+                    <Sidebar.Pusher dimmed={visible} style={{height: "100%"}}>
                         {this.props.children}
                     </Sidebar.Pusher>
                 </Sidebar.Pushable>

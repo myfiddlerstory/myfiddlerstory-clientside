@@ -18,6 +18,7 @@ import Questions from '../Questions';
 import ReviewPage from '../ReviewPage'
 import CompletePage from '../CompletePage'
 import ReviewQuestions from '../ReviewQuestions'
+import PublicAnswers from '../PublicAnswers'
 import Webcam from '../Webcam'
 
 function MainApp(props) {
@@ -52,6 +53,10 @@ function MainApp(props) {
                     <AppContainer isMenuVisible={false} {...routerProps}>
                         <CompletePage {...routerProps} />
                     </AppContainer>
+                )} />
+                <Route path={"/public-answers"} render={routerProps => (
+                    <PublicAnswers {...routerProps} />
+                   
                 )} />
             </Switch>
 

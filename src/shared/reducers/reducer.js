@@ -6,10 +6,12 @@
 import initialState from './initialState'
 import {
     QUESTION,
+    USER
 
 } from './model'
 
 import QuestionReducer from './Questions/reducer'
+
 
 
 const FiddlerReducer  = (state = initialState, action) => {

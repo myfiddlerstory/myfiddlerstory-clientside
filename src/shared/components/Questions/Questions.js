@@ -450,7 +450,7 @@ class Questions extends PureComponent {
                                                     </span>
                                                     <span> and went to </span>
                                                     <br />
-                                                    <span>
+                                                    <span style={{lineHeight: "60px"}}>
                                                         <Input placeholder="Enter Country/ City" onChange={this.onSecondC}/>
                                                     </span>
 
@@ -832,8 +832,8 @@ class Questions extends PureComponent {
                                                     <span>
                                                         <Input placeholder="Enter Country/ City" onChange={this.onThirdC}/>
                                                     </span>
-                                                    <span> in </span>
-                                                    <span>
+                                                    <span style={{lineHeight: "60px"}}> in </span>
+                                                    <span style={{lineHeight: "60px"}}>
                                                         <Input placeholder="Enter Year" onChange={this.onThirdD}/>
                                                     </span>
 

@@ -135,7 +135,7 @@ class ReviewQuestions extends PureComponent {
                                                 </span>
                                                 <span> and went to </span>
                                                 <br />
-                                                <span>
+                                                <span style={{lineHeight: "60px"}}>
                                                     <Input placeholder="Enter Country/ City" value={secondValueC}/>
                                                 </span>
 
@@ -517,8 +517,8 @@ class ReviewQuestions extends PureComponent {
                                                 <span>
                                                     <Input placeholder="Enter Country/ City" value={thirdValueC}/>
                                                 </span>
-                                                <span> in </span>
-                                                <span>
+                                                <span style={{lineHeight: "60px"}}> in </span>
+                                                <span style={{lineHeight: "60px"}}>
                                                     <Input placeholder="Enter Year" value={thirdValueD}/>
                                                 </span>
 

@@ -86,6 +86,10 @@ class SubmitDialog extends PureComponent {
             EmailAddress: email || "",
             Anonymous: Anonymous,
         }
+        let videoObj = {}
+        if(video){
+            videoObj = {video}
+        }
         let url = `${hostUrl}`
         if (type === "first") {
             url = `${url}/add_survey_information`
@@ -117,8 +121,8 @@ class SubmitDialog extends PureComponent {
                 question21_blank1: twentyFirstValue|| "",
                 question22_blank1: twentySecondValue|| "",
                 question23_blank1: twentyThirdValue|| "",
-                link: video
-
+                link:video
+        
             }
         } else if (type === "second") {
             console.log("Enter Second")

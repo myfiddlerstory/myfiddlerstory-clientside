@@ -1,0 +1,123 @@
+.public-answers-tab-container{
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 20px;
+    font-size: 35px;
+    border-bottom: 1px solid #707070;
+}
+
+.public-answers-tab{
+    flex: 1 1 auto;
+    text-align: center;
+    cursor: pointer;
+    /* border-bottom: 2px solid; */
+}
+
+.public-answers-data{
+    display: flex;
+}
+
+
+
+
+/**********************************Public Ids Container ***********************************/
+.public-ids-container{
+    width: 300px;
+    height: 600px;
+    border-right: 1px solid
+
+}
+
+.public-id-element{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px
+}
+
+/************************************* Answers *******************************************/
+.answers-all-questions-container{
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+
+.answers-question-data-container{
+    height: 100px;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.answers-question-number-data {
+
+}
+
+.answers-question-data{
+    margin-left: 42px;
+    flex: 1 1 auto;
+}
+
+.answers-question-text-data{
+    line-height: 44px;
+    position: relative;
+    top: -13px;
+}
+
+.answers-question-description-data{
+   font-weight: 500;
+}
+
+.answers-question-description-data textarea{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.answers-question-description-data .ui.form textarea {
+    margin: 0;
+    -webkit-appearance: none;
+    tap-highlight-color: rgba(255,255,255,0);
+    padding: 0px;
+    background: transparent;
+    border: none;
+    outline: 0;
+    color: rgba(0,0,0,.87);
+    border-radius: .28571429rem;
+    -webkit-box-shadow: 0 0 0 0 transparent inset;
+    box-shadow: 0 0 0 0 transparent inset;
+    -webkit-transition: color .1s ease,border-color .1s ease;
+    transition: color .1s ease,border-color .1s ease;
+    font-size: 25px;
+    line-height: 1.2857;
+    resize: vertical;
+}
+
+
+.answers-question-description-data .ui.form textarea:focus {
+    color: rgba(0,0,0,.95);
+    border-color: none;
+    border-radius: .28571429rem;
+    background: transparent;
+    -webkit-box-shadow: 0 0 0 0 rgba(34,36,38,.35) inset;
+    box-shadow: 0 0 0 0 rgba(34,36,38,.35) inset;
+    -webkit-appearance: none;
+}
+
+.answers-question-data .ui.input>input{
+    background: transparent;
+    border: none;
+    height: 35px;
+    line-height: 35px;
+    padding: 0px;
+    font-size: 25px;
+}
+
+.input-container{
+    padding-left: 15px;
+    font-weight: 500
+}
+
+.answers-container{
+    margin-top: 20px;
+}

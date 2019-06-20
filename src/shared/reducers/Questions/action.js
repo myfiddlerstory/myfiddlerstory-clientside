@@ -6,6 +6,7 @@
 export const INIT_QUESTIONS = "init_questions"
 export const STORE_VIDEOS = "store_videos"
 export const STORE_ANSWER = "store_answer"
+export const INIT_USER    = "init_user"
 import {QUESTION} from '../model'
 const model = QUESTION
 
@@ -59,6 +60,19 @@ export const populateAnswer = (questionId, answer) => {
             }
         })
     }
+}
+
+
+export const initUser = (userIdList) => {
+    return (dispatch, getState) => {
+    dispatch({
+        type: INIT_USER,
+        model,
+        payload: {
+            userIdList : userIdList
+        }
+    })
+}
 }
 
 

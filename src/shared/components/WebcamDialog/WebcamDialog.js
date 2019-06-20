@@ -73,7 +73,12 @@ class WebcamDialog extends PureComponent {
     stopRecording = () => {
         const {storeVideoAction} = this.props
         this.recorder.getDataURL((data) => {
-            console.log("Data", data)
+            let encoded = btoa(data)
+            console.log("encoded",  encoded)
+            let decoded = atob(encoded)
+            console.log("Decoded", decoded)
+            
+            
             this.setState({
                 videoSource: data,
                 isShowVideo: true,
