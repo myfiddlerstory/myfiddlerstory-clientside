@@ -379,32 +379,51 @@
 
 
 @media only screen and (max-height: 150px){
-
+    .review-questions-container{
+        height: 50px;
+        margin-top: 70px;
+      
+    }
 }
 
 
 @media only screen and (min-height: 151px) and (max-height: 300px){
-
+    .review-questions-container{
+        height: 80px;
+      
+    }
 }
 
 
 @media only screen and (min-height: 301px) and (max-height: 500px){
-
+    .review-questions-container{
+        height: 150px;
+      
+    }
 }
 
 
 @media only screen and (min-height: 501px) and (max-height: 700px){
-
+    .review-questions-container{
+        height: 300px;
+     
+    }
 }
 
 
 @media only screen and (min-height: 701px) and (max-height: 900px){
-
+    .review-questions-container{
+        height: 500px;
+     
+    }
 }
 
 
 @media only screen and (min-height: 901px) and (max-height: 1100px){
-
+    .review-questions-container{
+        height: 600px;
+     
+    }
 }
 
 
