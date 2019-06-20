@@ -19,7 +19,10 @@ import ReviewPage from '../ReviewPage'
 import CompletePage from '../CompletePage'
 import ReviewQuestions from '../ReviewQuestions'
 import PublicAnswers from '../PublicAnswers'
-import Webcam from '../Webcam'
+import About from '../About'
+import Partners from '../Partners'
+import News from '../News'
+
 
 function MainApp(props) {
     // render() {
@@ -56,6 +59,18 @@ function MainApp(props) {
                 )} />
                 <Route path={"/public-answers"} render={routerProps => (
                     <PublicAnswers {...routerProps} />
+                   
+                )} />
+                <Route path={"/about"} render={routerProps => (
+                    <About {...routerProps} />
+                   
+                )} />
+                 <Route path={"/partners"} render={routerProps => (
+                    <Partners {...routerProps} />
+                   
+                )} />
+                 <Route path={"/news"} render={routerProps => (
+                    <News {...routerProps} />
                    
                 )} />
             </Switch>

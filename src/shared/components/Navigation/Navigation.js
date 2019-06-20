@@ -47,23 +47,28 @@ class Navigation extends PureComponent {
                     <img src={CloseIcon} style={{ width: "25px" }} />
                 </div>
                 <div className="navigation-element-container">
-                    <div className="navigation-element">
-                        <span>
-                            <img src={AboutIcon} className="navigation-element-icon" />
-                        </span>
-                        <span className="navigation-element-text">
-                            About
+                    <Link to={"/about"}>
+                        <div className="navigation-element">
+                            <span>
+                                <img src={AboutIcon} className="navigation-element-icon" />
+                            </span>
+                            <span className="navigation-element-text">
+                                About
                     </span>
-                    </div>
+                        </div>
+                    </Link>
 
-                    <div className="navigation-element">
-                        <span>
-                            <img src={QuestionsIcon} className="navigation-element-icon" />
-                        </span>
-                        <span className="navigation-element-text">
-                            The Questions
+                    <Link to={"/"}>
+
+                        <div className="navigation-element">
+                            <span>
+                                <img src={QuestionsIcon} className="navigation-element-icon" />
+                            </span>
+                            <span className="navigation-element-text">
+                                The Questions
                     </span>
-                    </div>
+                        </div>
+                    </Link>
                     <Link to={"/public-answers"}>
                         <div className="navigation-element">
                             <span>
@@ -74,24 +79,29 @@ class Navigation extends PureComponent {
                         </span>
                         </div>
                     </Link>
-
-
-                    <div className="navigation-element">
-                        <span>
-                            <img src={NewsIcon} className="navigation-element-icon" />
-                        </span>
-                        <span className="navigation-element-text">
-                            News
+                    <Link to={"/news"}>
+                        <div className="navigation-element">
+                            <span>
+                                <img src={NewsIcon} className="navigation-element-icon" />
+                            </span>
+                            <span className="navigation-element-text">
+                                News
                     </span>
-                    </div>
-                    <div className="navigation-element">
-                        <span>
-                            <img src={partnerIcon} className="navigation-element-icon" />
+                        </div>
+                    </Link>
+
+                    <Link to={"/partners"}>
+
+                        <div className="navigation-element">
+                            <span>
+                                <img src={partnerIcon} className="navigation-element-icon" />
+                            </span>
+                            <span className="navigation-element-text">
+                                Partners
                         </span>
-                        <span className="navigation-element-text">
-                            Partners
-                    </span>
-                    </div>
+                        </div>
+                    </Link>
+
                 </div>
             </div>
         )
