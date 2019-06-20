@@ -62,7 +62,7 @@
         height: 52px;
         position: relative;
         bottom: 52px;
-        width: 350px;
+        /* width: 350px; */
     }
 
     .start-button-container {
@@ -103,7 +103,7 @@
         height: 52px;
         position: relative;
         bottom: 52px;
-        width: 549px;
+        /* width: 549px; */
     }
 
     .start-button-container {
@@ -130,7 +130,43 @@
 
 
 @media only screen and (min-width: 550px) and (max-width: 700px){
+    .landing-page-container {
+        height: 400px;
+        margin-top: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 20px;
+        text-align: center;
+    }
 
+    .landing-page-fade-in-container {
+        background: linear-gradient(to bottom, rgba(198,142,48, 0.7), rgba(198,142,48, 0.7));
+        height: 52px;
+        position: relative;
+        bottom: 52px;
+        /* width: 549px; */
+    }
+
+    .start-button-container {
+        display: flex;
+        display: -webkit-flex;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 10px;
+    }
+
+    .start-button {
+        width: 160px;
+        height: 40px;
+        background: #ffffff;
+        line-height: 40px;
+        color: #707070;
+        font-weight: 500;
+        text-align: center;
+        border-radius: 18px;
+        font-size: 9px;
+        cursor: pointer;
+    }
 }
 
 /*** Tablet ***/

@@ -158,17 +158,19 @@ class SubmitDialog extends PureComponent {
                 'content-type': 'application/json',
             },
         }
-
-        console.log("Api Calling")
-        axios.post(url, questionObj, config)
-            .then((data) => {
-                console.log("Successfully Submiited", data)
-               
-                onDialogStateChange(false)
-            })
-            .catch(error => {
-                console.error("Error in submitting response", error)
-            })
+        if(value){
+            console.log("Api Calling")
+            axios.post(url, questionObj, config)
+                .then((data) => {
+                    console.log("Successfully Submiited", data)
+                   
+                    onDialogStateChange(false)
+                })
+                .catch(error => {
+                    console.error("Error in submitting response", error)
+                })
+        }
+       
     }
 
 

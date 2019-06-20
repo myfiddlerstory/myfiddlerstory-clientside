@@ -26,7 +26,7 @@ class Answers extends PureComponent {
             <div style={{flex: "1 1 auto"}}>
                 {answerData && !isEmpty(answerData) && 
                     <div className="answers-container">
-                        <div style={{paddingLeft: "70px", fontSize:"25px", fontWeight:"500"}}>{name}</div>
+                        <div className="answer-name-container" >{name}</div>
                         <div style={{flex: "1 1 auto", height: "500px", marginTop:"20px"}}>
                         <CustomScrollbar>
                             <div className="answers-all-questions-container">

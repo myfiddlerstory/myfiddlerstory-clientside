@@ -119,3 +119,295 @@
     border-radius: 20px;
     cursor: pointer;
 }
+
+
+
+/************************************************** Responsive Designs **********************************************/
+
+/*** Mobile ***/
+
+@media only screen and (max-width: 350px){
+
+    .review-questions-container{
+        margin-top: 70px;
+        height: 400px;
+    }
+    .review-all-questions-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .review-question-data-container{
+        height: 150px;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .review-question-data {
+        margin-left: 30px;
+        flex: 1 1 auto;
+    }
+
+    .review-question-text-data {
+        line-height: 30px;
+        position: relative;
+        top: -6px;
+    }
+
+    .review-question-description-data .ui.form textarea {
+        margin: 0;
+        -webkit-appearance: none;
+        tap-highlight-color: rgba(255,255,255,0);
+        padding: 0px;
+        background: transparent;
+        border: none;
+        outline: 0;
+        color: rgba(0,0,0,.87);
+        border-radius: .28571429rem;
+        -webkit-box-shadow: 0 0 0 0 transparent inset;
+        box-shadow: 0 0 0 0 transparent inset;
+        -webkit-transition: color .1s ease,border-color .1s ease;
+        transition: color .1s ease,border-color .1s ease;
+        font-size: 20px;
+        line-height: 1.2857;
+        resize: vertical;
+    }
+
+    .review-question-data .ui.input>input {
+        background: transparent;
+        border: none;
+        height: 35px;
+        line-height: 35px;
+        padding: 0px;
+        font-size: 17px;
+        width: 150px;
+    }
+
+    .review-questions-button {
+        text-align: center;
+        /* margin-top: 50px; */
+        width: 250px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 18px;
+        border: solid 1px #707070;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: #dfa02f;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 351px) and (max-width: 549px){
+    .review-questions-container{
+        margin-top: 70px;
+        height: 495px;
+    }
+    .review-all-questions-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .review-question-data-container{
+        height: 150px;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+
+    .review-question-data {
+        margin-left: 30px;
+        flex: 1 1 auto;
+    }
+
+    .review-question-text-data {
+        line-height: 30px;
+        position: relative;
+        top: -6px;
+    }
+
+    .review-question-description-data .ui.form textarea {
+        margin: 0;
+        -webkit-appearance: none;
+        tap-highlight-color: rgba(255,255,255,0);
+        padding: 0px;
+        background: transparent;
+        border: none;
+        outline: 0;
+        color: rgba(0,0,0,.87);
+        border-radius: .28571429rem;
+        -webkit-box-shadow: 0 0 0 0 transparent inset;
+        box-shadow: 0 0 0 0 transparent inset;
+        -webkit-transition: color .1s ease,border-color .1s ease;
+        transition: color .1s ease,border-color .1s ease;
+        font-size: 20px;
+        line-height: 1.2857;
+        resize: vertical;
+    }
+
+    .review-question-data .ui.input>input {
+        background: transparent;
+        border: none;
+        height: 35px;
+        line-height: 35px;
+        padding: 0px;
+        font-size: 17px;
+        width: 150px;
+    }
+
+    .review-questions-button {
+        text-align: center;
+        /* margin-top: 50px; */
+        width: 250px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 18px;
+        border: solid 1px #707070;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: #dfa02f;
+        cursor: pointer;
+    }
+}
+
+
+@media only screen and (min-width: 550px) and (max-width: 700px){
+    .review-questions-container{
+        margin-top: 70px;
+        height: 495px;
+    }
+    .review-all-questions-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .review-question-data-container{
+        height: 150px;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+
+    .review-question-data {
+        margin-left: 30px;
+        flex: 1 1 auto;
+    }
+
+    .review-question-text-data {
+        line-height: 30px;
+        position: relative;
+        top: -6px;
+    }
+
+    .review-question-description-data .ui.form textarea {
+        margin: 0;
+        -webkit-appearance: none;
+        tap-highlight-color: rgba(255,255,255,0);
+        padding: 0px;
+        background: transparent;
+        border: none;
+        outline: 0;
+        color: rgba(0,0,0,.87);
+        border-radius: .28571429rem;
+        -webkit-box-shadow: 0 0 0 0 transparent inset;
+        box-shadow: 0 0 0 0 transparent inset;
+        -webkit-transition: color .1s ease,border-color .1s ease;
+        transition: color .1s ease,border-color .1s ease;
+        font-size: 20px;
+        line-height: 1.2857;
+        resize: vertical;
+    }
+
+    .review-question-data .ui.input>input {
+        background: transparent;
+        border: none;
+        height: 35px;
+        line-height: 35px;
+        padding: 0px;
+        font-size: 17px;
+        width: 150px;
+    }
+
+    .review-questions-button {
+        text-align: center;
+        /* margin-top: 50px; */
+        width: 250px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 18px;
+        border: solid 1px #707070;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: #dfa02f;
+        cursor: pointer;
+    }
+}
+
+/*** Tablet ***/
+@media only screen and (min-width: 701px) and (max-width: 767px){
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+
+}
+
+
+/*** Desktop ***/
+@media only screen and (min-width: 1025px) and (max-width: 1199px){
+
+}
+
+/* Default */
+@media only screen and (min-width: 1200px) and (max-width: 1918px){
+
+}
+
+/*** BigScreen ***/
+@media only screen and (min-width: 1919px){
+    
+}
+
+
+@media only screen and (max-height: 150px){
+
+}
+
+
+@media only screen and (min-height: 151px) and (max-height: 300px){
+
+}
+
+
+@media only screen and (min-height: 301px) and (max-height: 500px){
+
+}
+
+
+@media only screen and (min-height: 501px) and (max-height: 700px){
+
+}
+
+
+@media only screen and (min-height: 701px) and (max-height: 900px){
+
+}
+
+
+@media only screen and (min-height: 901px) and (max-height: 1100px){
+
+}
+
+
+
+
+
