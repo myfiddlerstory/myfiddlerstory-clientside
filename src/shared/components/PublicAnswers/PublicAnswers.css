@@ -438,6 +438,7 @@
         line-height: 50px;
         text-align: center;
         font-size: 12px;
+        cursor: pointer;
     }
 
     .answers-all-questions-container {
