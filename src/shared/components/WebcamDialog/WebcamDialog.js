@@ -7,6 +7,7 @@ import React, { PureComponent, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import {Modal} from 'semantic-ui-react'
 import {connect} from 'react-redux'
+import fileDownload from 'js-file-download'
 
 //import css
 import './WebcamDialog.css'
@@ -73,10 +74,12 @@ class WebcamDialog extends PureComponent {
     stopRecording = () => {
         const {storeVideoAction} = this.props
         this.recorder.getDataURL((data) => {
-            let encoded = btoa(data)
-            console.log("encoded",  encoded)
-            let decoded = atob(encoded)
-            console.log("Decoded", decoded)
+            // fileDownload(data, 'video.webm')
+            //             fileDownload(data, 'video.mov')
+            // let encoded = btoa(data)
+            // console.log("encoded",  encoded)
+            // let decoded = atob(encoded)
+            // console.log("Decoded", decoded)
             
             
             this.setState({

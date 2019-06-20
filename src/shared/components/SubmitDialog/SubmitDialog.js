@@ -9,6 +9,8 @@ import { Link, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import axios from 'axios'
 import { hostUrl } from '../helper'
+import fileDownload from 'js-file-download'
+// var fileDownload = require('js-file-download');
 
 //import css
 import './SubmitDialog.css'
@@ -71,7 +73,7 @@ class SubmitDialog extends PureComponent {
             twentyFirstValue,
             twentySecondValue,
             twentyThirdValue,
-            video , onDialogStateChange} = this.props
+            video, onDialogStateChange } = this.props
         const { email, fullName, value } = this.state
         let Anonymous = false
         if (email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
@@ -87,8 +89,8 @@ class SubmitDialog extends PureComponent {
             Anonymous: Anonymous,
         }
         let videoObj = {}
-        if(video){
-            videoObj = {video}
+        if (video) {
+            videoObj = { video }
         }
         let url = `${hostUrl}`
         if (type === "first") {
@@ -96,61 +98,61 @@ class SubmitDialog extends PureComponent {
             questionObj = {
                 ...questionObj,
                 question1_blank1: firstValue || "",
-                question2_blank1: secondValueA|| "",
-                question2_blank2: secondValueB|| "",
-                question2_blank3: secondValueC|| "",
-                question3_blank1: thirdValue|| "",
-                question4_blank1: fourthValue|| "",
-                question5_blank1: fifthValue|| "",
-                question6_blank1: sixthValue|| "",
-                question7_blank1: seventhValue|| "",
-                question8_blank1: eighth|| "",
-                question9_blank1: ninthValue|| "",
-                question10_blank1: tenthValue|| "",
-                question11_blank1: eleventhValue|| "",
-                question12_blank1: twelvethValue|| "",
-                question13_blank1: thirteenthValueA|| "",
-                question13_blank2: thirteenthValueB|| "",
-                question14_blank1: fourteenthValue|| "",
-                question15_blank1: fifteenthValue|| "",
-                question16_blank1: sixteenthValue|| "",
-                question17_blank1: seventeenthValue|| "",
-                question18_blank1: eighteenthValue|| "",
-                question19_blank1: nineteenthValue|| "",
-                question20_blank1: twentithValue|| "",
-                question21_blank1: twentyFirstValue|| "",
-                question22_blank1: twentySecondValue|| "",
-                question23_blank1: twentyThirdValue|| "",
-                link:video
-        
+                question2_blank1: secondValueA || "",
+                question2_blank2: secondValueB || "",
+                question2_blank3: secondValueC || "",
+                question3_blank1: thirdValue || "",
+                question4_blank1: fourthValue || "",
+                question5_blank1: fifthValue || "",
+                question6_blank1: sixthValue || "",
+                question7_blank1: seventhValue || "",
+                question8_blank1: eighth || "",
+                question9_blank1: ninthValue || "",
+                question10_blank1: tenthValue || "",
+                question11_blank1: eleventhValue || "",
+                question12_blank1: twelvethValue || "",
+                question13_blank1: thirteenthValueA || "",
+                question13_blank2: thirteenthValueB || "",
+                question14_blank1: fourteenthValue || "",
+                question15_blank1: fifteenthValue || "",
+                question16_blank1: sixteenthValue || "",
+                question17_blank1: seventeenthValue || "",
+                question18_blank1: eighteenthValue || "",
+                question19_blank1: nineteenthValue || "",
+                question20_blank1: twentithValue || "",
+                question21_blank1: twentyFirstValue || "",
+                question22_blank1: twentySecondValue || "",
+                question23_blank1: twentyThirdValue || "",
+                link: ""
+
             }
         } else if (type === "second") {
             console.log("Enter Second")
             url = `${url}/add_second_generation_survey_information`
             questionObj = {
-                ...questionObj|| "",
-                 question1_blank1 : firstValue|| "",
-                 question2_blank1 : secondValueA|| "", 
-                 question3_blank1 : thirdValueA|| "",
-                 question3_blank2 : thirdValueB|| "",
-                 question3_blank3 : thirdValueC|| "",
-                 question3_blank4 : thirdValueD|| "",
-                 question4_blank1 : fourthValue|| "",
-                 question5_blank1 : fifthValueA|| "",
-                 question5_blank2 : fifthValueB|| "",
-                 question5_blank3 : fifthValueC|| "",
-                 question6_blank1 : sixthValue|| "",
-                 question7_blank1 : seventhValue|| "",
-                 question8_blank1 : eighth|| "",
-                 question9_blank1 : ninthValue|| "",
-                 question10_blank1 : tenthValue|| "",
-                 question11_blank1 : eleventhValue|| "",
-                 question12_blank1 : twelvethValue|| "",
-                 question13_blank1 : thirteenthValue|| "",
-                 question14_blank1 : fourteenthValue|| "",
-                 question15_blank1 : fifteenthValue|| "",
-                 question16_blank1 : sixteenthValue|| "",
-                 link: video
+                ...questionObj || "",
+                question1_blank1: firstValue || "",
+                question2_blank1: secondValueA || "",
+                question3_blank1: thirdValueA || "",
+                question3_blank2: thirdValueB || "",
+                question3_blank3: thirdValueC || "",
+                question3_blank4: thirdValueD || "",
+                question4_blank1: fourthValue || "",
+                question5_blank1: fifthValueA || "",
+                question5_blank2: fifthValueB || "",
+                question5_blank3: fifthValueC || "",
+                question6_blank1: sixthValue || "",
+                question7_blank1: seventhValue || "",
+                question8_blank1: eighth || "",
+                question9_blank1: ninthValue || "",
+                question10_blank1: tenthValue || "",
+                question11_blank1: eleventhValue || "",
+                question12_blank1: twelvethValue || "",
+                question13_blank1: thirteenthValue || "",
+                question14_blank1: fourteenthValue || "",
+                question15_blank1: fifteenthValue || "",
+                question16_blank1: sixteenthValue || "",
+                link: ""
             }
         }
         const config = {
@@ -158,20 +160,42 @@ class SubmitDialog extends PureComponent {
                 'content-type': 'application/json',
             },
         }
-        if(value){
+        if (value) {
             console.log("Api Calling")
             axios.post(url, questionObj, config)
                 .then((data) => {
                     console.log("Successfully Submiited", data)
-                   
-                    onDialogStateChange(false)
+                    //Usage example:
+                    if(video){
+                        fileDownload(video, 'MyFiddlerStory.webm')
+                        // fileDownload(video, 'MyFiddlerStory.mov')
+                        // let file = this.dataURLtoFile(video, 'video.mp4');
+                        // console.log(file);
+                    }
+                    setTimeout(() => {
+                        onDialogStateChange(false)
+                    })
+                  
                 })
                 .catch(error => {
                     console.error("Error in submitting response", error)
                 })
         }
-       
+
     }
+
+
+
+    dataURLtoFile = (dataurl, filename) => {
+        var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
+            bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+        while (n--) {
+            u8arr[n] = bstr.charCodeAt(n);
+        }
+        return new File([u8arr], filename, { type: mime });
+    }
+
+
 
 
     onChangeEmail = (e, data) => {
@@ -228,11 +252,11 @@ class SubmitDialog extends PureComponent {
                             </Fragment>
                         }
                     </div>
-                    <Link 
-                    to={{
-                        pathname:"/success",
-                        type: type
-                    }}>
+                    <Link
+                        to={{
+                            pathname: "/success",
+                            type: type
+                        }}>
 
                         <div className="submit-dialog-button-container" style={buttonStyle}>
                             <div className="submit-dialog-button" onClick={this.onSubmit}>Done</div>
