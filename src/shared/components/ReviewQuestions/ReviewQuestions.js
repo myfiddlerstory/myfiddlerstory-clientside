@@ -11,6 +11,8 @@ import {connect} from 'react-redux'
 //import css
 import './ReviewQuestions.css'
 
+import { initQuestions, findQuestionById, populateAnswer } from '../../reducers/Questions/action'
+
 //import components
 import CustomScrollbar from '../CustomScrollbar'
 import SubmitDialog from '../SubmitDialog';
@@ -54,6 +56,302 @@ class ReviewQuestions extends PureComponent {
         this.setState({
             isWebcamOpened: false
         })
+    }
+
+    onFirst = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("0", {value})
+        }
+    }
+
+
+    onSecondA = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            populateAnswer("1", {a: data.value})
+        }
+    }
+
+    onSecondB= (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            populateAnswer("1", {b:data.value})
+        }
+    }
+
+    onSecondC = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            populateAnswer("1", {c: data.value})
+        }
+    }
+
+    onSecondD = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            populateAnswer("1", {d:data.value})
+        }
+    }
+
+    onThird = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("2", {value})
+        }
+    }
+
+    onThirdA = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("2", {a: value})
+        }
+    }
+    
+    onThirdB = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("2", {b: value})
+        }
+    }
+
+    onThirdC = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("2", {c: value})
+        }
+    }
+
+    onThirdD = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("2", {d: value})
+        }
+    }
+
+    onFourth = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("3", {value})
+        }
+    }
+
+    onFourthA = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            populateAnswer("3", {a: data.value})
+        }
+    }
+
+    onFourthB = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            populateAnswer("3", {b: data.value})
+        }
+    }
+
+    onFourthC = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            populateAnswer("3", {c: data.value})
+        }
+    }
+
+    onFifth = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("4", {value})
+        }
+    }
+
+    onFifthA = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("4", {a: value})
+        }
+    }
+
+    onFifthB = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("4", {b: value})
+        }
+    }
+
+    onFifthC = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("4", {c: value})
+        }
+    }
+
+    onSixth = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("5", {value})
+        }
+    }
+
+    onSeven= (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("6", {value})
+        }
+    }
+
+    onEight = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("7", {value})
+        }
+    }
+
+    onNinth = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("8", {value})
+        }
+    }
+
+    onTenth = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("9", {value})
+        }
+    }
+
+    onEleventh = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("10", {value})
+        }
+    }
+
+    onTwelveth = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("11", {value})
+        }
+    }
+
+    onThirteenth = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("12", {value})
+        }
+    }
+
+    onThirteenthA  = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            populateAnswer("12", {a:data.value})
+        }
+    }
+
+    onThirteenthB  = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            populateAnswer("12", {b:data.value})
+        }
+    }
+
+    onFourteenth  = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("13", {value})
+        }
+    }
+
+    onFifteenth  = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("14", {value})
+        }
+    }
+
+    onSixteenth  = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("15", {value})
+        }
+    }
+
+    onSeventeenth  = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("16", {value})
+        }
+    }
+
+    onEighteenth  = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("17", {value})
+        }
+    }
+
+    onNineteenth  = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("18", {value})
+        }
+    }
+
+    onTwentith  = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("19", {value})
+        }
+    }
+
+    onTwentyFirst  = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("20", {value})
+        }
+    }
+
+    onTwentySecond  = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("21", {value})
+        }
+    }
+
+    onTwentyThird  = (e, data) => {
+        const {populateAnswer } = this.props
+        if(data && data.value){
+            let value = data.value
+            populateAnswer("22", {value})
+        }
     }
     render() {
         const { location,
@@ -113,7 +411,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">I was born in the year</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={firstValue}/>
+                                                        <TextArea placeholder="Type words here.." value={firstValue} onChange={this.onFirst}/>
                                                     </Form>
                                                 </div>
                                             </div>
@@ -127,16 +425,16 @@ class ReviewQuestions extends PureComponent {
                                             <div className="review-question-data" style={{ position: "relative", top: "-10px" }}>
                                                 <span>In </span>
                                                 <span className="input-container">
-                                                    <Input placeholder="Enter Year" value={secondValueA}/>
+                                                    <Input placeholder="Enter Year" value={secondValueA} onChange={this.onSecondA}/>
                                                 </span>
                                                 <span> I Left </span>
                                                 <span className="input-container">
-                                                    <Input placeholder="Enter Country/ City" value={secondValueB}/>
+                                                    <Input placeholder="Enter Country/ City" value={secondValueB} onChange={this.onSecondB}/>
                                                 </span>
                                                 <span> and went to </span>
                                                 <br />
                                                 <span style={{lineHeight: "60px"}}>
-                                                    <Input placeholder="Enter Country/ City" value={secondValueC}/>
+                                                    <Input placeholder="Enter Country/ City" value={secondValueC} onChange={this.onSecondC}/>
                                                 </span>
 
                                             </div>
@@ -152,7 +450,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">I now Live in</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={thirdValue}/>
+                                                        <TextArea placeholder="Type words here.." value={thirdValue} onChange={this.onThird}/>
                                                     </Form>
                                                 </div>
                                             </div>
@@ -167,7 +465,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">Three words to describe what it felt like to leave the country I was born in…</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={fourthValue}/>
+                                                        <TextArea placeholder="Type words here.." value={fourthValue} onChange={this.onFourth}/>
                                                     </Form>
                                                 </div>
                                             </div>
@@ -182,7 +480,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">The most surprising thing about the journey was…</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={fifthValue}/>
+                                                        <TextArea placeholder="Type words here.." value={fifthValue} onChange={this.onFifth}/>
                                                     </Form>
                                                 </div>
                                             </div>
@@ -197,7 +495,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">The hardest thing about the journey was…</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={sixthValue}/>
+                                                        <TextArea placeholder="Type words here.." value={sixthValue} onChange={this.onSixth}/>
                                                     </Form>
                                                 </div>
                                             </div>
@@ -212,7 +510,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">The scariest thing about the journey was…</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={seventhValue}/>
+                                                        <TextArea placeholder="Type words here.." value={seventhValue} onChange={this.onSeven}/>
                                                     </Form>
                                                 </div>
                                             </div>
@@ -226,7 +524,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">One lovely thing that I can remember about the journey was…</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={eighth}/>
+                                                        <TextArea placeholder="Type words here.." value={eighth} onChange={this.onEight}/>
                                                     </Form>
                                                 </div>
                                             </div>
@@ -241,7 +539,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">My most treasured possession that I brought with me was….</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={ninthValue}/>
+                                                        <TextArea placeholder="Type words here.." value={ninthValue} onChange={this.onNinth}/>
                                                     </Form>
                                                 </div>
                                             </div>
@@ -256,7 +554,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">I brought it because….</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={tenthValue}/>
+                                                        <TextArea placeholder="Type words here.." value={tenthValue} onChange={this.onTenth}/>
                                                     </Form>
                                                 </div>
                                             </div>
@@ -271,7 +569,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">Do I still have it/know where it is?</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={eleventhValue}/>
+                                                        <TextArea placeholder="Type words here.." value={eleventhValue} onChange={this.onEleventh}/>
                                                     </Form>
                                                 </div>
                                             </div>
@@ -286,7 +584,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">When I left my old home/country, what I missed the most was…</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={twelvethValue}/>
+                                                        <TextArea placeholder="Type words here.." value={twelvethValue} onChange={this.onTwelveth}/>
                                                     </Form>
                                                 </div>
                                             </div>
@@ -299,12 +597,12 @@ class ReviewQuestions extends PureComponent {
                                             <div>Q13.</div>
                                             <div className="review-question-data" style={{ position: "relative", top: "-10px" }}>
                                                 <span className="input-container">
-                                                    <Input placeholder="Enter Year" value={thirteenthValueA}/>
+                                                    <Input placeholder="Enter Year" value={thirteenthValueA} onChange={this.onThirteenthA}/>
                                                 </span>
                                                 <span> years later, I still miss… </span>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={thirteenthValueB}/>
+                                                        <TextArea placeholder="Type words here.." value={thirteenthValueB} onChange={this.onThirteenthB}/>
                                                     </Form>
                                                 </div>
 
@@ -319,7 +617,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">I wish someone had told me…</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={fourteenthValue}/>
+                                                        <TextArea placeholder="Type words here.." value={fourteenthValue} onChange={this.onFourteenth}/>
                                                     </Form>
                                                 </div>
                                             </div>
@@ -333,7 +631,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">I have always wondered….</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={fifteenthValue}/>
+                                                        <TextArea placeholder="Type words here.." value={fifteenthValue} onChange={this.onFifteenth}/>
                                                     </Form>
                                                 </div>
                                             </div>
@@ -348,7 +646,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">Before I got to my new country/home, I thought it would be…..</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={sixteenthValue}/>
+                                                        <TextArea placeholder="Type words here.." value={sixteenthValue} onChange={this.onSixteenth}/>
                                                     </Form>
                                                 </div>
                                             </div>
@@ -363,7 +661,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">When I got here, I realized it was….</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={seventeenthValue}/>
+                                                        <TextArea placeholder="Type words here.." value={seventeenthValue} onChange={this.onSeventeenth}/>
                                                     </Form>
                                                 </div>
                                             </div>
@@ -378,7 +676,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">The best bit of advice I ever received about this journey was…</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={eighteenthValue}/>
+                                                        <TextArea placeholder="Type words here.." value={eighteenthValue} onChange={this.onEighteenth}/>
                                                     </Form>
                                                 </div>
                                             </div>
@@ -393,7 +691,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">Something amazing about the whole experience that I have never told anyone…..</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={nineteenthValue}/>
+                                                        <TextArea placeholder="Type words here.." value={nineteenthValue} onChange={this.onNineteenth}/>
                                                     </Form>
                                                 </div>
                                             </div>
@@ -408,7 +706,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">I hope that….</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={twentithValue}/>
+                                                        <TextArea placeholder="Type words here.." value={twentithValue} onChange={this.onTwentith}/>
                                                     </Form>
 
                                                 </div>
@@ -424,7 +722,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">If you have just landed in a new land and are scared, know this:</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={twentyFirstValue}/>
+                                                        <TextArea placeholder="Type words here.." value={twentyFirstValue} onChange={this.onTwentyFirst}/>
                                                     </Form>
 
                                                 </div>
@@ -440,7 +738,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">I am grateful for….</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={twentySecondValue}/>
+                                                        <TextArea placeholder="Type words here.." value={twentySecondValue} onChange={this.onTwentySecond}/>
                                                     </Form>
 
                                                 </div>
@@ -455,7 +753,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">My prayer is…</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={twentyThirdValue}/>
+                                                        <TextArea placeholder="Type words here.." value={twentyThirdValue} onChange={this.onTwentyThird}/>
                                                     </Form>
 
                                                 </div>
@@ -475,7 +773,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">I live in</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Enter City/Country" value={firstValue}/>
+                                                        <TextArea placeholder="Enter City/Country" value={firstValue} onChange={this.onFirst}/>
                                                     </Form>
 
                                                 </div>
@@ -489,7 +787,7 @@ class ReviewQuestions extends PureComponent {
                                             <div className="review-question-data" style={{ position: "relative", top: "-10px" }}>
                                                 <span>I am </span>
                                                 <span className="input-container">
-                                                    <Input placeholder="Enter generation" value={secondValueA}/>
+                                                    <Input placeholder="Enter generation" value={secondValueA} onChange={this.onSecondA}/>
                                                 </span>
                                                 <span>  generation in this country. </span>
                                       
@@ -505,21 +803,21 @@ class ReviewQuestions extends PureComponent {
                                             <div className="review-question-data" style={{ position: "relative", top: "-10px" }}>
                                                 <span>I am </span>
                                                 <span className="input-container">
-                                                    <Input placeholder="Enter your relative" value={thirdValueA}/>
+                                                    <Input placeholder="Enter your relative" value={thirdValueA} onChange={this.onThirdA}/>
                                                 </span>
                                                 <span>  migrated from </span>
                                                 <span className="input-container">
-                                                    <Input placeholder="Enter Country/ City" value={thirdValueB}/>
+                                                    <Input placeholder="Enter Country/ City" value={thirdValueB}  onChange={this.onThirdB}/>
                                                 </span>
                                                 <span> to </span>
                                                 <br />
 
                                                 <span>
-                                                    <Input placeholder="Enter Country/ City" value={thirdValueC}/>
+                                                    <Input placeholder="Enter Country/ City" value={thirdValueC}  onChange={this.onThirdC}/>
                                                 </span>
                                                 <span style={{lineHeight: "60px"}}> in </span>
                                                 <span style={{lineHeight: "60px"}}>
-                                                    <Input placeholder="Enter Year" value={thirdValueD}/>
+                                                    <Input placeholder="Enter Year" value={thirdValueD}  onChange={this.onThirdD}/>
                                                 </span>
 
                                             </div>
@@ -535,7 +833,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">Growing up, our family always felt a little different because</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={fourthValue}/>
+                                                        <TextArea placeholder="Type words here.." value={fourthValue}  onChange={this.onFourth}/>
                                                     </Form>
 
                                                 </div>
@@ -550,16 +848,16 @@ class ReviewQuestions extends PureComponent {
                                             <div className="review-question-data" style={{ position: "relative", top: "-10px" }}>
                                                 <span>My </span>
                                                 <span className="input-container">
-                                                    <Input placeholder="Enter your relative" value={fifthValueA}/>
+                                                    <Input placeholder="Enter your relative" value={fifthValueA}  onChange={this.onFifthA}/>
                                                 </span>
                                                 <span>  would often </span>
                                                 <span className="input-container">
-                                                    <Input placeholder="Type your words here.." value={fifthValueB}/>
+                                                    <Input placeholder="Type your words here.." value={fifthValueB}  onChange={this.onFifthB}/>
                                                 </span>
                                                 <span style={{ lineHeight: "44px" }}> And it made me feel </span>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={fifthValueC}/>
+                                                        <TextArea placeholder="Type words here.." value={fifthValueC}  onChange={this.onFifthC}/>
                                                     </Form>
 
                                                 </div>
@@ -579,7 +877,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">I have often wondered how they</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={sixthValue}/>
+                                                        <TextArea placeholder="Type words here.." value={sixthValue}  onChange={this.onSixth}/>
                                                     </Form>
 
                                                 </div>
@@ -595,7 +893,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">Now that I am older, I feel</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={seventhValue}/>
+                                                        <TextArea placeholder="Type words here.." value={seventhValue}  onChange={this.onSeven}/>
                                                     </Form>
 
                                                 </div>
@@ -611,7 +909,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">One tradition that they kept that I loved</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={eighth}/>
+                                                        <TextArea placeholder="Type words here.." value={eighth}  onChange={this.onEight}/>
                                                     </Form>
 
                                                 </div>
@@ -627,7 +925,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">One traditions that they kept that I did not love</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={ninthValue}/>
+                                                        <TextArea placeholder="Type words here.." value={ninthValue}  onChange={this.onNinth}/>
                                                     </Form>
 
                                                 </div>
@@ -643,7 +941,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">I always wish I had asked</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={tenthValue}/>
+                                                        <TextArea placeholder="Type words here.." value={tenthValue}  onChange={this.onTenth}/>
                                                     </Form>
 
                                                 </div>
@@ -658,7 +956,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">I imagine they would say</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={eleventhValue}/>
+                                                        <TextArea placeholder="Type words here.." value={eleventhValue}  onChange={this.onEleventh}/>
                                                     </Form>
 
                                                 </div>
@@ -674,7 +972,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">It is amazing to me that they</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={twelvethValue}/>
+                                                        <TextArea placeholder="Type words here.." value={twelvethValue}  onChange={this.onTwelveth}/>
                                                     </Form>
 
                                                 </div>
@@ -690,7 +988,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">I wish I could tell them</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={thirteenthValue}/>
+                                                        <TextArea placeholder="Type words here.." value={thirteenthValue}  onChange={this.onThirteenth}/>
                                                     </Form>
 
                                                 </div>
@@ -706,7 +1004,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">I am proud that</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={fourteenthValue}/>
+                                                        <TextArea placeholder="Type words here.." value={fourteenthValue}  onChange={this.onFourteenth}/>
                                                     </Form>
 
                                                 </div>
@@ -722,7 +1020,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">And grateful for</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={fifteenthValue}/>
+                                                        <TextArea placeholder="Type words here.." value={fifteenthValue}  onChange={this.onFifteenth}/>
                                                     </Form>
 
                                                 </div>
@@ -737,7 +1035,7 @@ class ReviewQuestions extends PureComponent {
                                                 <div className="review-question-text-data">Here’s hoping that</div>
                                                 <div className="review-question-description-data">
                                                     <Form>
-                                                        <TextArea placeholder="Type words here.." value={sixteenthValue}/>
+                                                        <TextArea placeholder="Type words here.." value={sixteenthValue}  onChange={this.onSixteenth}/>
                                                     </Form>
 
                                                 </div>
@@ -975,5 +1273,9 @@ const mapStateToProps = (state, props) => {
     }
 }
 
+const mapActionsToProps = {
+    populateAnswer
+}
 
-export default withRouter(connect(mapStateToProps, null)(ReviewQuestions))
+
+export default withRouter(connect(mapStateToProps, mapActionsToProps)(ReviewQuestions))
