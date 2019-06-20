@@ -69,7 +69,7 @@ class LandingPage extends PureComponent {
                                     we all have a “Fiddler Story”. We’d love to hear yours.
                        </p>
 
-                                <p>
+                                <p style={{marginBottom: "70px"}}>
                                     Click on one of the buttons below and tell us about
                                     you and your family’s journey to this country.
                        </p>

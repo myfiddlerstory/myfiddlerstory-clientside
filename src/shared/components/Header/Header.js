@@ -33,21 +33,21 @@ class Header extends PureComponent {
         return (
             <div className="header-container">
                 <div className={menuClassName}>
-                    <div style={{ fontWeight: "bold" }}>Menu</div>
-                    <img src={MenuLogo} style={{ width: "40px", cursor: "pointer" }} onClick={onOpenSidebar}/>
+                    <div className="header-menu-text">Menu</div>
+                    <img src={MenuLogo} className="header-menu-logo" style={{ cursor: "pointer" }} onClick={onOpenSidebar}/>
                 </div>
 
                 <div className="header-logo-container">
 
                     <div className="header-fiddler-logo-container">
-                        <img src={FiddlerLogo} style={{ width: "180px" }} onClick={this.onRediectToHome}/>
+                        <img src={FiddlerLogo} className="header-fiddler-logo" onClick={this.onRediectToHome}/>
                     </div>
 
 
                     <div className="header-fiddler-text-container" onClick={this.onRediectToHome}>#MyFiddlerStory</div>
 
                     <div className="header-reboot-logo-container">
-                        <img src={RebootLogo} style={{ width: "200px", height: "50px" }} onClick={this.onRediectToHome}/>
+                        <img src={RebootLogo} className="header-reboot-logo" onClick={this.onRediectToHome}/>
                     </div>
 
 

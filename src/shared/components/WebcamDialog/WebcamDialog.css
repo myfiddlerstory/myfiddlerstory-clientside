@@ -31,3 +31,145 @@
     cursor: pointer;
 }
 
+.current-webcam-video{
+    width: 710px !important;
+    height: 400px !important;
+}
+
+.webcam-video{
+    width: 710px !important;
+    height: 400px !important; 
+}
+
+
+/************************************************** Responsive Designs **********************************************/
+
+/*** Mobile ***/
+
+@media only screen and (max-width: 350px){
+    .webcam-dialog-container {
+        width: 250px !important;
+        height: 266px;
+        padding: 10px;
+    }
+
+    .current-webcam-video{
+        width: 230px !important;
+        height: 150px !important;
+    }
+    
+    .webcam-video{
+        width: 230px !important;
+        height: 150px !important; 
+    }
+
+    .webcam-dialog-start-stop-container {
+        width: 130px;
+        text-align: center;
+        height: 35px;
+        line-height: 35px;
+        background: #dfa02f;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+}
+
+@media only screen and (min-width: 351px) and (max-width: 549px){
+    .webcam-dialog-container {
+        width: 250px !important;
+        height: 266px;
+        padding: 10px;
+    }
+
+    .current-webcam-video{
+        width: 230px !important;
+        height: 150px !important;
+    }
+    
+    .webcam-video{
+        width: 230px !important;
+        height: 150px !important; 
+    }
+
+    .webcam-dialog-start-stop-container {
+        width: 130px;
+        text-align: center;
+        height: 35px;
+        line-height: 35px;
+        background: #dfa02f;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 15px;
+        cursor: pointer;
+    }
+}
+
+
+@media only screen and (min-width: 550px) and (max-width: 700px){
+
+}
+
+/*** Tablet ***/
+@media only screen and (min-width: 701px) and (max-width: 767px){
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+
+}
+
+
+/*** Desktop ***/
+@media only screen and (min-width: 1025px) and (max-width: 1199px){
+
+}
+
+/* Default */
+@media only screen and (min-width: 1200px) and (max-width: 1918px){
+
+}
+
+/*** BigScreen ***/
+@media only screen and (min-width: 1919px){
+    
+}
+
+
+@media only screen and (max-height: 150px){
+
+}
+
+
+@media only screen and (min-height: 151px) and (max-height: 300px){
+
+}
+
+
+@media only screen and (min-height: 301px) and (max-height: 500px){
+
+}
+
+
+@media only screen and (min-height: 501px) and (max-height: 700px){
+
+}
+
+
+@media only screen and (min-height: 701px) and (max-height: 900px){
+
+}
+
+
+@media only screen and (min-height: 901px) and (max-height: 1100px){
+
+}
+
+
+
+
+
+

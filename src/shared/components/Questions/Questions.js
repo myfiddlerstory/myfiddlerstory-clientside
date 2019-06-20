@@ -763,7 +763,7 @@ class Questions extends PureComponent {
                                             </div>
                                         </div>
 
-                                        <div className="questions-data-container" style={{ height: "350px" }} id="first-last">
+                                        <div className="questions-data-container last-question" id="first-last">
                                             <div style={{ display: "flex" }}>
                                                 <div>Q23.</div>
                                                 <div className="questions-data">
@@ -1046,7 +1046,7 @@ class Questions extends PureComponent {
                                         </div>
 
 
-                                        <div className="questions-data-container" id="second-last">
+                                        <div className="questions-data-container last-question"  id="second-last">
                                             <div style={{ display: "flex" }}>
                                                 <div>Q16.</div>
                                                 <div className="questions-data">

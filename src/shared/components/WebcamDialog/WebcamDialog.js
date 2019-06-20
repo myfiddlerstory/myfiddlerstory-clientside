@@ -142,8 +142,8 @@ class WebcamDialog extends PureComponent {
                 </div>
                 <div className="webcam-video-container">
                     <div className="camera">
-                        {!isShowVideo && <video id="video"></video>}
-                        {isShowVideo && <video controls style={{width: 710, height: 400}}>
+                        {!isShowVideo && <video id="video" className="current-webcam-video"></video>}
+                        {isShowVideo && <video controls className="webcam-video" >
                             <source type="video/webm" src={videoSource} />
                         </video>}
                         <div className="webcam-dialog-button-container">
