@@ -82,7 +82,7 @@
 
 .record-video-container{
     width: 380px;
-    line-height: 80px;
+    /* line-height: 80px; */
     height: 80px;
     background: #ffffff;
     border-radius: 18px;
@@ -90,11 +90,13 @@
     border: solid 1px #707070;
     padding: 0 30px;
     cursor: pointer;
+    padding-top: 10px;
 }
 
 .record-video-icon{
     position: relative;
     top: 7px;
+    padding-top: 10px;
 }
 
 .record-video-text{
@@ -103,6 +105,12 @@
 
 .last-question{
     height: 350px;
+}
+
+.record-video-support-version{
+    font-size: 13px;
+    margin-top: 5px;
+    margin-left: 50px;
 }
 
 
@@ -215,7 +223,7 @@
 
     .record-video-container {
         width: 200px;
-        line-height: 55px;
+        /* line-height: 55px; */
         height: 55px;
         background: #ffffff;
         border-radius: 18px;
@@ -227,7 +235,8 @@
 
     .record-video-icon {
         position: relative;
-        top: 10px;
+        top: 7px;
+        padding-top: 10px;
     }
 
     .question-footer-container {
@@ -323,7 +332,7 @@
 
     .record-video-container {
         width: 200px;
-        line-height: 55px;
+        /* line-height: 55px; */
         height: 55px;
         background: #ffffff;
         border-radius: 18px;
@@ -335,7 +344,8 @@
 
     .record-video-icon {
         position: relative;
-        top: 10px;
+        top: 7px;
+        padding-top: 10px;
     }
 
     .question-footer-container {
@@ -430,7 +440,7 @@
 
     .record-video-container {
         width: 200px;
-        line-height: 55px;
+        /* line-height: 55px; */
         height: 55px;
         background: #ffffff;
         border-radius: 18px;
@@ -442,7 +452,8 @@
 
     .record-video-icon {
         position: relative;
-        top: 10px;
+        top: 7px;
+        padding-top: 10px;
     }
 
     .question-footer-container {
@@ -535,7 +546,7 @@
 
     .record-video-container {
         width: 200px;
-        line-height: 55px;
+        /* line-height: 55px; */
         height: 55px;
         background: #ffffff;
         border-radius: 18px;
@@ -547,7 +558,8 @@
 
     .record-video-icon {
         position: relative;
-        top: 10px;
+        top: 7px;
+        padding-top: 10px;
     }
 
     .question-footer-container {
@@ -640,7 +652,7 @@
 
     .record-video-container {
         width: 200px;
-        line-height: 55px;
+        /* line-height: 55px; */
         height: 55px;
         background: #ffffff;
         border-radius: 18px;
@@ -652,7 +664,8 @@
 
     .record-video-icon {
         position: relative;
-        top: 10px;
+        top: 7px;
+        padding-top: 10px;
     }
 
     .question-footer-container {

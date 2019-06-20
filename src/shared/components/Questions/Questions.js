@@ -30,7 +30,8 @@ class Questions extends PureComponent {
         super(props)
         this.state = {
             isDialogOpened : false,
-            isFinishButtonVisible : false
+            isFinishButtonVisible : false,
+            answeredQuestions: 0
         }
     }
 
@@ -77,12 +78,34 @@ class Questions extends PureComponent {
         })
     }
 
+    incrementQuestion =  () => {
+        const {answeredQuestions} = this.state
+        this.setState({
+            answeredQuestions: answeredQuestions + 1
+        })
+    }
+
+    decrementQuestion = () => {
+        const {answeredQuestions} = this.state
+        if(answeredQuestions !== 0){
+            this.setState({
+                answeredQuestions: answeredQuestions - 1
+            })
+        }
+    }
+
     onFirst = (e, data) => {
         const {populateAnswer } = this.props
-        if(data && data.value){
-            let value = data.value
-            populateAnswer("0", {value})
+        if(data){
+            if(data.value){
+                let value = data.value
+                populateAnswer("0", {value})
+                this.incrementQuestion()
+            } else{
+                this.decrementQuestion()
+            }
         }
+       
     }
 
 
@@ -90,6 +113,9 @@ class Questions extends PureComponent {
         const {populateAnswer } = this.props
         if(data && data.value){
             populateAnswer("1", {a: data.value})
+           this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -97,6 +123,9 @@ class Questions extends PureComponent {
         const {populateAnswer } = this.props
         if(data && data.value){
             populateAnswer("1", {b:data.value})
+            // this.incrementQuestion()
+        } else{
+            // this.decrementQuestion()
         }
     }
 
@@ -104,6 +133,9 @@ class Questions extends PureComponent {
         const {populateAnswer } = this.props
         if(data && data.value){
             populateAnswer("1", {c: data.value})
+            // this.incrementQuestion()
+        } else{
+            // this.decrementQuestion()
         }
     }
 
@@ -111,6 +143,9 @@ class Questions extends PureComponent {
         const {populateAnswer } = this.props
         if(data && data.value){
             populateAnswer("1", {d:data.value})
+            // this.incrementQuestion()
+        } else{
+            // this.decrementQuestion()
         }
     }
 
@@ -119,6 +154,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("2", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -127,6 +165,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("2", {a: value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
     
@@ -159,6 +200,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("3", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -166,6 +210,9 @@ class Questions extends PureComponent {
         const {populateAnswer } = this.props
         if(data && data.value){
             populateAnswer("3", {a: data.value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -173,6 +220,8 @@ class Questions extends PureComponent {
         const {populateAnswer } = this.props
         if(data && data.value){
             populateAnswer("3", {b: data.value})
+        } else{
+
         }
     }
 
@@ -188,6 +237,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("4", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -196,6 +248,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("4", {a: value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -220,6 +275,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("5", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -228,6 +286,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("6", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -236,6 +297,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("7", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -244,6 +308,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("8", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -252,6 +319,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("9", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -260,6 +330,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("10", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -268,6 +341,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("11", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -276,6 +352,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("12", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -283,6 +362,9 @@ class Questions extends PureComponent {
         const {populateAnswer } = this.props
         if(data && data.value){
             populateAnswer("12", {a:data.value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -298,6 +380,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("13", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -306,6 +391,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("14", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -314,6 +402,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("15", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -322,6 +413,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("16", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -330,6 +424,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("17", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -338,6 +435,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("18", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -346,6 +446,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("19", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -354,6 +457,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("20", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -362,6 +468,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("21", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -370,6 +479,9 @@ class Questions extends PureComponent {
         if(data && data.value){
             let value = data.value
             populateAnswer("22", {value})
+            this.incrementQuestion()
+        } else{
+            this.decrementQuestion()
         }
     }
 
@@ -427,7 +539,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">I was born in the year</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea placeholder="Type words here.." onChange={this.onFirst}/>
+                                                            <TextArea placeholder="Type words here.." onChange={this.onFirst} onBlur={this.onFirstBlur}/>
                                                         </Form>
                                                     </div>
                                                 </div>
@@ -441,16 +553,16 @@ class Questions extends PureComponent {
                                                 <div className="questions-data" style={{ position: "relative", top: "-10px" }}>
                                                     <span>In </span>
                                                     <span className="input-container">
-                                                        <Input placeholder="Enter Year" onChange={this.onSecondA}/>
+                                                        <Input placeholder="Enter Year" onChange={this.onSecondA}  onBlur={this.onSecondABlur}/>
                                                     </span>
                                                     <span> I Left </span>
                                                     <span className="input-container">
-                                                        <Input placeholder="Enter Country/ City" onChange={this.onSecondB}/>
+                                                        <Input placeholder="Enter Country/ City" onChange={this.onSecondB} onBlur={this.onSecondBBlur}/>
                                                     </span>
                                                     <span> and went to </span>
                                                     <br />
                                                     <span style={{lineHeight: "60px"}}>
-                                                        <Input placeholder="Enter Country/ City" onChange={this.onSecondC}/>
+                                                        <Input placeholder="Enter Country/ City" onChange={this.onSecondC} onBlur={this.onSecondCBlur}/>
                                                     </span>
 
                                                 </div>
@@ -466,7 +578,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">I now Live in</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea placeholder="Type words here.." onChange={this.onThird}/>
+                                                            <TextArea placeholder="Type words here.." onChange={this.onThird} onBlur={this.onThirdBlur}/>
                                                         </Form>
                                                     </div>
                                                 </div>
@@ -481,7 +593,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">Three words to describe what it felt like to leave the country I was born in…</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea placeholder="Type words here.." onChange={this.onFourth}/>
+                                                            <TextArea placeholder="Type words here.." onChange={this.onFourth} onBlur={this.onFourthBlur}/>
                                                         </Form>
                                                     </div>
                                                 </div>
@@ -496,7 +608,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">The most surprising thing about the journey was…</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea placeholder="Type words here.." onChange={this.onFifth}/>
+                                                            <TextArea placeholder="Type words here.." onChange={this.onFifth} onBlur={this.onFifthBlur}/>
                                                         </Form>
                                                     </div>
                                                 </div>
@@ -511,7 +623,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">The hardest thing about the journey was…</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea placeholder="Type words here.." onChange={this.onSixth}/>
+                                                            <TextArea placeholder="Type words here.." onChange={this.onSixth} onBlur={this.onSixthBlur}/>
                                                         </Form>
                                                     </div>
                                                 </div>
@@ -526,7 +638,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">The scariest thing about the journey was…</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea placeholder="Type words here.." onChange={this.onSeven}/>
+                                                            <TextArea placeholder="Type words here.." onChange={this.onSeven} onBlur={this.onSevenBlur}/>
                                                         </Form>
                                                     </div>
                                                 </div>
@@ -540,7 +652,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">One lovely thing that I can remember about the journey was…</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea placeholder="Type words here.." onChange={this.onEight}/>
+                                                            <TextArea placeholder="Type words here.." onChange={this.onEight} onBlur={this.onEightBlur}/>
                                                         </Form>
                                                     </div>
                                                 </div>
@@ -555,7 +667,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">My most treasured possession that I brought with me was….</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea placeholder="Type words here.." onChange={this.onNinth}/>
+                                                            <TextArea placeholder="Type words here.." onChange={this.onNinth} onBlur={this.onNinthBlur}/>
                                                         </Form>
                                                     </div>
                                                 </div>
@@ -570,7 +682,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">I brought it because….</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea placeholder="Type words here.." onChange={this.onTenth}/>
+                                                            <TextArea placeholder="Type words here.." onChange={this.onTenth} onBlur={this.onTenthBlur}/>
                                                         </Form>
                                                     </div>
                                                 </div>
@@ -585,7 +697,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">Do I still have it/know where it is?</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea placeholder="Type words here.." onChange={this.onEleventh}/>
+                                                            <TextArea placeholder="Type words here.." onChange={this.onEleventh} onBlur={this.onEleventhBlur}/>
                                                         </Form>
                                                     </div>
                                                 </div>
@@ -600,7 +712,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">When I left my old home/country, what I missed the most was…</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea placeholder="Type words here.." onChange={this.onTwelveth}/>
+                                                            <TextArea placeholder="Type words here.." onChange={this.onTwelveth} onBlur={this.onTwelvethBlur}/>
                                                         </Form>
                                                     </div>
                                                 </div>
@@ -613,12 +725,12 @@ class Questions extends PureComponent {
                                                 <div>Q13.</div>
                                                 <div className="questions-data" style={{ position: "relative", top: "-10px" }}>
                                                     <span className="input-container">
-                                                        <Input placeholder="Enter Year" onChange={this.onThirteenthA}/>
+                                                        <Input placeholder="Enter Year" onChange={this.onThirteenthA} onBlur={this.onThirteenthABlur}/>
                                                     </span>
                                                     <span> years later, I still miss… </span>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea placeholder="Type words here.." onChange={this.onThirteenthB}/>
+                                                            <TextArea placeholder="Type words here.." onChange={this.onThirteenthB} onBlur={this.onThirteenthBBlur}/>
                                                         </Form>
                                                     </div>
 
@@ -633,7 +745,7 @@ class Questions extends PureComponent {
                                                     <div className="questions-text-data">I wish someone had told me…</div>
                                                     <div className="questions-description-data">
                                                         <Form>
-                                                            <TextArea placeholder="Type words here.." onChange={this.onFourteenth}/>
+                                                            <TextArea placeholder="Type words here.." onChange={this.onFourteenth} onBlur={this.onFourteenthBlur}/>
                                                         </Form>
                                                     </div>
                                                 </div>
@@ -1071,7 +1183,7 @@ class Questions extends PureComponent {
                                             <span className="record-video-icon">
                                                 <img src={VideoIcon} />
                                             </span>
-                                            <span className="record-video-text"> Record your video</span>
+                                            <span className="record-video-text"> Record your video<br/><span className="record-video-support-version">(Supported on Chrome Browser only)</span></span>
                                         </div>
                                     {/* </Link> */}
 

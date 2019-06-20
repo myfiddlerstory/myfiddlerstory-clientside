@@ -39,7 +39,7 @@ class QuestionFooter extends PureComponent{
         const {answeredQuestions, totalQuestions, isFinishButtonVisible, type} = this.props
         return (
             <div className="question-footer-container">
-                <div className="question-footer-text">{answeredQuestions} of {totalQuestions} answered</div>
+                <div className="question-footer-text"></div>
                 {isFinishButtonVisible && 
                 <div className="question-footer-conatiner" style={{marginRight: "20px"}}>
                     <Link to={{
