@@ -109,17 +109,95 @@
 
 
 @media only screen and (min-width: 550px) and (max-width: 700px){
+    .webcam-dialog-container {
+        width: 250px !important;
+        height: 266px;
+        padding: 10px;
+    }
 
+    .current-webcam-video{
+        width: 230px !important;
+        height: 150px !important;
+    }
+    
+    .webcam-video{
+        width: 230px !important;
+        height: 150px !important; 
+    }
+
+    .webcam-dialog-start-stop-container {
+        width: 130px;
+        text-align: center;
+        height: 35px;
+        line-height: 35px;
+        background: #dfa02f;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 15px;
+        cursor: pointer;
+    }
 }
 
 /*** Tablet ***/
 @media only screen and (min-width: 701px) and (max-width: 767px){
+    .webcam-dialog-container {
+        width: 400px !important;
+        height: 420px;
+        padding: 15px;
+    }
 
+    .current-webcam-video{
+        width: 370px !important;
+        height: 250px !important;
+    }
+    
+    .webcam-video{
+        width: 370px !important;
+        height: 250px !important;
+    }
+
+    .webcam-dialog-start-stop-container {
+        width: 170px;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        background: #dfa02f;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+    }
 }
 
 
 @media only screen and (min-width: 768px) and (max-width: 1024px){
+    .webcam-dialog-container {
+        width: 400px !important;
+        height: 420px;
+        padding: 15px;
+    }
 
+    .current-webcam-video{
+        width: 370px !important;
+        height: 250px !important;
+    }
+    
+    .webcam-video{
+        width: 370px !important;
+        height: 250px !important;
+    }
+
+    .webcam-dialog-start-stop-container {
+        width: 170px;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        background: #dfa02f;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+    }
 }
 
 

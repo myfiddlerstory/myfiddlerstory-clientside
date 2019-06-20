@@ -34,7 +34,7 @@ class StartButton extends PureComponent {
                             type: "second",
                         }}>
                              <div className="start-button">
-                                I Am A Second Generation Refugee
+                                I Am The Descendant of Refugees
                             </div>
                         </Link>
                         

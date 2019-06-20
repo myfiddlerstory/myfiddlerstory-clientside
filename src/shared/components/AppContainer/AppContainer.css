@@ -43,7 +43,12 @@
 
 /*** Tablet ***/
 @media only screen and (min-width: 701px) and (max-width: 767px){
-
+    .app-container {
+        background-image: url("../../icons/refugee_image.png");
+        height: inherit;
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
 }
 
 
@@ -54,7 +59,12 @@
 
 /*** Desktop ***/
 @media only screen and (min-width: 1025px) and (max-width: 1199px){
-
+    .app-container {
+        background-image: url("../../icons/refugee_image.png");
+        height: inherit;
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
 }
 
 /* Default */

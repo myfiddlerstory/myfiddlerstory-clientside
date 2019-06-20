@@ -100,12 +100,44 @@
 
 /*** Tablet ***/
 @media only screen and (min-width: 701px) and (max-width: 767px){
+    .navigation-container {
+        width: 300px;
+        background: #ffffff;
+        height: 100%;
+        padding: 35px;
+    }
 
+    .navigation-element {
+        height: 40px;
+        line-height: 40px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    .navigation-element-text {
+        margin-left: 25px;
+        font-size: 22px;
+    }
 }
 
 
 @media only screen and (min-width: 768px) and (max-width: 1024px){
+    .navigation-container {
+        width: 300px;
+        background: #ffffff;
+        height: 100%;
+        padding: 35px;
+    }
 
+    .navigation-element {
+        height: 40px;
+        line-height: 40px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    .navigation-element-text {
+        margin-left: 25px;
+        font-size: 22px;
+    }
 }
 
 

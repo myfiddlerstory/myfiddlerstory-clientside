@@ -169,7 +169,7 @@ class PublicAnswers extends PureComponent{
             <div>
                 <div className="public-answers-tab-container">
                     <div className="public-answers-tab" style={firstStyle} onClick={this.onSelectFirstGeneration}>First Generation</div>
-                    <div className="public-answers-tab" style={secondStyle} onClick={this.onSelectSecondGeneration}>Second Generation</div>
+                    <div className="public-answers-tab" style={secondStyle} onClick={this.onSelectSecondGeneration}>Descendant Refugee</div>
                 </div>
                 <div className="public-answers-data">
                     <PublicIds idList={idList} onFetchData={this.onFetchData}/>

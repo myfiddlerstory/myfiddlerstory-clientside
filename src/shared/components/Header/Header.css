@@ -232,12 +232,111 @@
 
 /*** Tablet ***/
 @media only screen and (min-width: 701px) and (max-width: 767px){
+    .header-container {
+        display: flex;
+        display: -webkit-flex;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 
+    .header-menu-text{
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .header-menu-logo{
+        width: 40px;
+    }
+
+    .header-fiddler-logo-container{
+        flex: 1 1 auto;
+        padding-left: 40px;
+        cursor: pointer;
+    }
+
+    .header-fiddler-logo{
+        width: 100px;
+    }
+
+
+    .header-fiddler-text-container {
+        flex: 1 1 auto;
+        height: 40px;
+        font-size: 20px;
+        line-height: 70px;
+        font-family: Avenir Next;
+        font-weight: 500;
+        cursor: pointer;
+        line-height: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .header-reboot-logo-container {
+        padding-right: 0px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .header-reboot-logo{
+        width: 150px;
+        height: 33px;
+    }
+    
 }
 
 
 @media only screen and (min-width: 768px) and (max-width: 1024px){
+    .header-container {
+        display: flex;
+        display: -webkit-flex;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 
+    .header-menu-text{
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .header-menu-logo{
+        width: 40px;
+    }
+
+    .header-fiddler-logo-container{
+        flex: 1 1 auto;
+        padding-left: 40px;
+        cursor: pointer;
+    }
+
+    .header-fiddler-logo{
+        width: 100px;
+    }
+
+
+    .header-fiddler-text-container {
+        flex: 1 1 auto;
+        height: 40px;
+        font-size: 20px;
+        line-height: 70px;
+        font-family: Avenir Next;
+        font-weight: 500;
+        cursor: pointer;
+        line-height: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .header-reboot-logo-container {
+        padding-right: 0px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .header-reboot-logo{
+        width: 150px;
+        height: 33px;
+    }
 }
 
 

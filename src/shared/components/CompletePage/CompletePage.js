@@ -4,6 +4,7 @@
  */
 
 import React, { PureComponent } from 'react'
+import {withRouter} from 'react-router-dom'
 
 //import css
 import './CompletePage.css'
@@ -13,6 +14,16 @@ import CustomScrollbar from '../CustomScrollbar'
 
 
 class CompletePage extends PureComponent {
+    componentDidMount(){
+        const {history, location} = this.props
+        if(location){
+            if(!location.type){
+                history.push("/")
+            }
+        } else{
+            history.push("/")
+        }
+    }
     render() {
         return (
             <div className="complete-page-container">
@@ -50,4 +61,4 @@ always seem to transpire. If that’s the case, let us know.
 }
 
 
-export default CompletePage
+export default withRouter(CompletePage) 

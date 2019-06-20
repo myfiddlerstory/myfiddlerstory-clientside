@@ -186,7 +186,7 @@ class SubmitDialog extends PureComponent {
         })
     }
     render() {
-        const { isDialogOpened, } = this.props
+        const { isDialogOpened, type } = this.props
         let buttonStyle = {}, modalClassname = "submit-dialog-modal"
         if (this.state.value === "public") {
             buttonStyle = {
@@ -228,7 +228,12 @@ class SubmitDialog extends PureComponent {
                             </Fragment>
                         }
                     </div>
-                    <Link to={"/success"}>
+                    <Link 
+                    to={{
+                        pathname:"/success",
+                        type: type
+                    }}>
+
                         <div className="submit-dialog-button-container" style={buttonStyle}>
                             <div className="submit-dialog-button" onClick={this.onSubmit}>Done</div>
                         </div>
