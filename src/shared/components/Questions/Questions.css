@@ -1,6 +1,6 @@
 .questions-container{
     margin-top: 70px;
-    height: 520px;
+    height: calc(100% - 100px);
 }
 
 .questions-all-data-container{
@@ -9,7 +9,7 @@
 }
 
 .questions-data-container{
-    height: 450px;
+    min-height: 450px;
     font-size: 35px;
 }
 
@@ -124,8 +124,7 @@
     line-height: 80px;
     border: solid 1px #707070;
   background-color: rgba(255, 255, 255, 0.5);
-  position: relative;
-  bottom: -24px;
+
   display: flex;
   align-items: center;
 
@@ -164,7 +163,7 @@
 @media only screen and (max-width: 350px){
     .questions-container {
         margin-top: 50px;
-        height: 340px;
+        height: calc(100% - 70px);
     }
 
     .questions-all-data-container {
@@ -246,8 +245,7 @@
         line-height: 80px;
         border: solid 1px #707070;
         background-color: rgba(255, 255, 255, 0.5);
-        position: relative;
-        bottom: -38px;
+      
         display: flex;
         align-items: center;
     }
@@ -278,7 +276,7 @@
 @media only screen and (min-width: 351px) and (max-width: 549px){
     .questions-container {
         margin-top: 50px;
-        height: 400px;
+        height: calc(100% - 70px);
     }
 
     .questions-all-data-container {
@@ -287,7 +285,7 @@
     }
 
     .questions-data-container {
-      
+       
         height: 250px;
         font-size: 20px;
     }
@@ -361,8 +359,7 @@
         line-height: 80px;
         border: solid 1px #707070;
         background-color: rgba(255, 255, 255, 0.5);
-        position: relative;
-        bottom: -38px;
+       
         display: flex;
         align-items: center;
     }
@@ -393,7 +390,7 @@
 @media only screen and (min-width: 550px) and (max-width: 700px){
     .questions-container {
         margin-top: 50px;
-        height: 400px;
+        height: calc(100% - 70px);
     }
 
     .questions-all-data-container {
@@ -402,8 +399,8 @@
     }
 
     .questions-data-container {
-      
         height: 250px;
+     
         font-size: 20px;
     }
 
@@ -476,8 +473,7 @@
         line-height: 80px;
         border: solid 1px #707070;
         background-color: rgba(255, 255, 255, 0.5);
-        position: relative;
-        bottom: -38px;
+       
         display: flex;
         align-items: center;
     }
@@ -506,7 +502,7 @@
 @media only screen and (min-width: 701px) and (max-width: 767px){
     .questions-container {
         margin-top: 50px;
-        height: 307px;
+        height: calc(100% - 70px);
     }
 
     .questions-all-data-container {
@@ -515,8 +511,8 @@
     }
 
     .questions-data-container {
-      
-        height: 250px;
+    
+      height: 250px;
         font-size: 20px;
     }
 
@@ -589,8 +585,7 @@
         line-height: 80px;
         border: solid 1px #707070;
         background-color: rgba(255, 255, 255, 0.5);
-        position: relative;
-        bottom: -38px;
+       
         display: flex;
         align-items: center;
     }
@@ -612,7 +607,7 @@
 @media only screen and (min-width: 768px) and (max-width: 1024px){
     .questions-container {
         margin-top: 50px;
-        height: 485px;
+        height: calc(100% - 70px);
     }
 
     .questions-all-data-container {
@@ -621,8 +616,8 @@
     }
 
     .questions-data-container {
-      
-        height: 250px;
+    
+      height: 250px;
         font-size: 20px;
     }
 
@@ -695,8 +690,7 @@
         line-height: 80px;
         border: solid 1px #707070;
         background-color: rgba(255, 255, 255, 0.5);
-        position: relative;
-        bottom: -38px;
+       
         display: flex;
         align-items: center;
     }
@@ -729,57 +723,6 @@
 @media only screen and (min-width: 1919px){
     
 }
-
-
-@media only screen and (max-height: 150px)  and (min-width: 1025px){
-    .questions-data-container{
-        height: 50px;
-        margin-top: 70px;
-      
-    }
-}
-
-
-@media only screen and (min-height: 151px) and (max-height: 300px)  and (min-width: 1025px){
-    .questions-data-container{
-        height: 80px;
-      
-    }
-}
-
-
-@media only screen and (min-height: 301px) and (max-height: 500px)  and (min-width: 1025px){
-    .questions-data-container{
-        height: 150px;
-      
-    }
-}
-
-
-@media only screen and (min-height: 501px) and (max-height: 700px) and (min-width: 1025px){
-    .questions-data-container{
-        height: 300px;
-     
-    }
-}
-
-
-@media only screen and (min-height: 701px) and (max-height: 900px)  and (min-width: 1025px){
-    .questions-data-container{
-        height: 500px;
-     
-    }
-}
-
-
-@media only screen and (min-height: 901px) and (max-height: 1100px) and (min-width: 1025px){
-    .questions-data-container{
-        height: 600px;
-     
-    }
-}
-
-
 
 
 
