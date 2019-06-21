@@ -37,9 +37,9 @@ class Partners extends PureComponent {
             <div className="complete-page-container">
             <div className="complete-page-heading">Partners</div>
                 <CustomScrollbar>
-                    <ul>
+                    <ul style={{paddingLeft: "0", listStyle:"none"}}>
                         <li style={{lineHeight: "60px"}}>Reboot</li>
-                        <li style={{lineHeight: "60px"}}>WIRD</li>
+                        <li style={{lineHeight: "60px"}}>WIRD <span><a href="https://wirdwrld.io/">(https://wirdwrld.io/)</a></span></li>
                         <li style={{lineHeight: "60px"}}>Ars Nova</li>
                         <li style={{lineHeight: "60px"}}>Silver Screen Studios</li>
                         <li style={{lineHeight: "60px"}}>American Friends Service Committee — Immigrant Rights Program</li>

@@ -26,6 +26,7 @@ class CompletePage extends PureComponent {
     }
     render() {
         return (
+            <div style={{display: "table-row", height: "100%"}}>
             <div className="complete-page-container">
             <div className="complete-page-heading">You Are Complete!</div>
                 <CustomScrollbar>
@@ -56,6 +57,8 @@ always seem to transpire. If that’s the case, let us know.
                 </CustomScrollbar>
                 <div className="complete-page-fade-in-container"></div>
             </div>
+            </div>
+
         )
     }
 }
