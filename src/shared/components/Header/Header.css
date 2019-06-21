@@ -1,8 +1,6 @@
 .header-container{
-    display: flex;
-    display: -webkit-flex;
-    padding-left: 40px;
-    padding-right: 40px;
+    display: table-row;
+    height: 52px;
 }
 
 .header-logo-container{
@@ -13,7 +11,7 @@
 }
 
 .header-menu{
-   
+   padding-left: 40px
 }
 
 .header-menu.hidden{
@@ -66,12 +64,15 @@
 /*** Mobile ***/
 
 @media only screen and (max-width: 350px){
-    .header-container {
-        display: flex;
-        display: -webkit-flex;
-        padding-left: 10px;
-        padding-right: 10px;
+    .header-container{
+        display: table-row;
+        height: 42px;
     }
+    
+
+    .header-menu{
+        padding-left: 10px
+     }
 
     .header-menu-text{
         font-weight: bold;
@@ -115,6 +116,7 @@
     .header-reboot-logo{
         width: 91px;
         height: 29px;
+        padding-right: 10px
     }
     
     
@@ -122,12 +124,15 @@
 }
 
 @media only screen and (min-width: 351px) and (max-width: 549px){
-    .header-container {
-        display: flex;
-        display: -webkit-flex;
-        padding-left: 20px;
-        padding-right: 20px;
+    .header-container{
+        display: table-row;
+        height: 45px;
     }
+    
+
+    .header-menu{
+        padding-left: 20px
+     }
 
     .header-menu-text{
         font-weight: bold;
@@ -170,19 +175,23 @@
 
     .header-reboot-logo{
         width: 100px;
-        height: 33px;
+        height: 33px; 
+        padding-right: 10px
     }
     
 }
 
 
 @media only screen and (min-width: 550px) and (max-width: 700px){
-    .header-container {
-        display: flex;
-        display: -webkit-flex;
-        padding-left: 20px;
-        padding-right: 20px;
+    .header-container{
+        display: table-row;
+        height: 45px;
     }
+    
+
+    .header-menu{
+        padding-left: 20px
+     }
 
     .header-menu-text{
         font-weight: bold;
@@ -226,18 +235,22 @@
     .header-reboot-logo{
         width: 100px;
         height: 33px;
+        padding-right: 10px
     }
     
 }
 
 /*** Tablet ***/
 @media only screen and (min-width: 701px) and (max-width: 767px){
-    .header-container {
-        display: flex;
-        display: -webkit-flex;
-        padding-left: 40px;
-        padding-right: 40px;
+    .header-container{
+        display: table-row;
+        height: 52px;
     }
+
+    .header-menu{
+        padding-left: 40px
+     }
+
 
     .header-menu-text{
         font-weight: bold;
@@ -281,18 +294,23 @@
     .header-reboot-logo{
         width: 150px;
         height: 33px;
+        padding-right: 20px
     }
     
 }
 
 
 @media only screen and (min-width: 768px) and (max-width: 1024px){
-    .header-container {
-        display: flex;
-        display: -webkit-flex;
-        padding-left: 40px;
-        padding-right: 40px;
+    .header-container{
+        display: table-row;
+        height: 52px;
     }
+
+    .header-menu{
+        padding-left: 40px
+     }
+
+
 
     .header-menu-text{
         font-weight: bold;
@@ -336,22 +354,23 @@
     .header-reboot-logo{
         width: 150px;
         height: 33px;
+        padding-right:20px
     }
 }
 
 
 /*** Desktop ***/
-@media only screen and (min-width: 1025px) and (max-width: 1199px){
+/* @media only screen and (min-width: 1025px) and (max-width: 1199px){
 
 }
 
-/* Default */
+
 @media only screen and (min-width: 1200px) and (max-width: 1918px){
 
-}
+} */
 
 /*** BigScreen ***/
-@media only screen and (min-width: 1919px){
+/* @media only screen and (min-width: 1919px){
     
 }
 
@@ -383,7 +402,7 @@
 
 @media only screen and (min-height: 901px) and (max-height: 1100px){
 
-}
+} */
 
 
 

@@ -2,7 +2,9 @@
     background-image: url("../../icons/refugee_image.png");
     height: inherit;
     padding-top: 50px;
-    padding-bottom: 70px;
+    display: table;
+    width: 100%
+    /* padding-bottom: 70px; */
    
 }
 
@@ -18,7 +20,7 @@
         background-image: url("../../icons/refugee_image.png");
         height: inherit;
         padding-top: 30px;
-        padding-bottom: 50px;
+        /* padding-bottom: 50px; */
     }
 }
 
@@ -27,7 +29,7 @@
         background-image: url("../../icons/refugee_image.png");
         height: inherit;
         padding-top: 30px;
-        padding-bottom: 50px;
+        /* padding-bottom: 50px; */
     }
 }
 
@@ -37,7 +39,7 @@
         background-image: url("../../icons/refugee_image.png");
         height: inherit;
         padding-top: 30px;
-        padding-bottom: 50px;
+        /* padding-bottom: 50px; */
     }
 }
 
@@ -47,13 +49,18 @@
         background-image: url("../../icons/refugee_image.png");
         height: inherit;
         padding-top: 40px;
-        padding-bottom: 50px;
+        /* padding-bottom: 50px; */
     }
 }
 
 
 @media only screen and (min-width: 768px) and (max-width: 1024px){
-
+    .app-container {
+        background-image: url("../../icons/refugee_image.png");
+        height: inherit;
+        padding-top: 40px;
+        /* padding-bottom: 50px; */
+    }
 }
 
 
@@ -63,7 +70,7 @@
         background-image: url("../../icons/refugee_image.png");
         height: inherit;
         padding-top: 40px;
-        padding-bottom: 50px;
+        /* padding-bottom: 50px; */
     }
 }
 

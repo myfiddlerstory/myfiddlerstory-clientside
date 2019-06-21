@@ -41,7 +41,7 @@ class LandingPage extends PureComponent {
         return (
             <Navigator visible={visible} onCloseSidebar={this.onCloseSidebar}>
                 <AppContainer isMenuVisible={true} onOpenSidebar={this.onOpenSidebar}>
-                    <div >
+                    <div style={{display: "table-row"}}>
                         <div className="landing-page-container">
                             <CustomScrollbar>
                                 <p>
@@ -69,14 +69,14 @@ class LandingPage extends PureComponent {
                                     we all have a “Fiddler Story”. We’d love to hear yours.
                        </p>
 
-                                <p style={{marginBottom: "70px"}}>
+                                <p >
                                     Click on one of the buttons below and tell us about
                                     you and your family’s journey to this country.
                        </p>
                             </CustomScrollbar>
                             <div className="landing-page-fade-in-container"></div>
                         </div>
-                        <div>
+                        <div className="start-button-main-container">
                             <StartButton />
                         </div>
                     </div>
