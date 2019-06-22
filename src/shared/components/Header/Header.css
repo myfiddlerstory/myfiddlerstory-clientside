@@ -141,6 +141,8 @@
 
     .header-menu-logo{
         width: 25px;
+        position: relative;
+        top: -15px;
     }
 
     .header-fiddler-logo-container{
@@ -200,6 +202,8 @@
 
     .header-menu-logo{
         width: 25px;
+        position: relative;
+        top: -15px;
     }
 
     .header-fiddler-logo-container{
@@ -259,6 +263,8 @@
 
     .header-menu-logo{
         width: 40px;
+        position: relative;
+        top: -40px;
     }
 
     .header-fiddler-logo-container{
@@ -329,6 +335,8 @@
 
     .header-fiddler-logo{
         width: 100px;
+        position: relative;
+        top: -40px;
     }
 
 
